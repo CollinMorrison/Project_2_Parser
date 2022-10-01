@@ -330,6 +330,71 @@ CMakeFiles/Project_2_Parser.dir/EOFAutomaton.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_2_Parser.dir/EOFAutomaton.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/c/collinam/CS_236/Project_2/EOFAutomaton.cpp -o CMakeFiles/Project_2_Parser.dir/EOFAutomaton.cpp.s
 
+CMakeFiles/Project_2_Parser.dir/Parser.cpp.o: CMakeFiles/Project_2_Parser.dir/flags.make
+CMakeFiles/Project_2_Parser.dir/Parser.cpp.o: ../Parser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/Project_2_Parser.dir/Parser.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_2_Parser.dir/Parser.cpp.o -c /users/guest/c/collinam/CS_236/Project_2/Parser.cpp
+
+CMakeFiles/Project_2_Parser.dir/Parser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_2_Parser.dir/Parser.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/c/collinam/CS_236/Project_2/Parser.cpp > CMakeFiles/Project_2_Parser.dir/Parser.cpp.i
+
+CMakeFiles/Project_2_Parser.dir/Parser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_2_Parser.dir/Parser.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/c/collinam/CS_236/Project_2/Parser.cpp -o CMakeFiles/Project_2_Parser.dir/Parser.cpp.s
+
+CMakeFiles/Project_2_Parser.dir/DatalogProgram.cpp.o: CMakeFiles/Project_2_Parser.dir/flags.make
+CMakeFiles/Project_2_Parser.dir/DatalogProgram.cpp.o: ../DatalogProgram.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/Project_2_Parser.dir/DatalogProgram.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_2_Parser.dir/DatalogProgram.cpp.o -c /users/guest/c/collinam/CS_236/Project_2/DatalogProgram.cpp
+
+CMakeFiles/Project_2_Parser.dir/DatalogProgram.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_2_Parser.dir/DatalogProgram.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/c/collinam/CS_236/Project_2/DatalogProgram.cpp > CMakeFiles/Project_2_Parser.dir/DatalogProgram.cpp.i
+
+CMakeFiles/Project_2_Parser.dir/DatalogProgram.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_2_Parser.dir/DatalogProgram.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/c/collinam/CS_236/Project_2/DatalogProgram.cpp -o CMakeFiles/Project_2_Parser.dir/DatalogProgram.cpp.s
+
+CMakeFiles/Project_2_Parser.dir/Predicate.cpp.o: CMakeFiles/Project_2_Parser.dir/flags.make
+CMakeFiles/Project_2_Parser.dir/Predicate.cpp.o: ../Predicate.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/Project_2_Parser.dir/Predicate.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_2_Parser.dir/Predicate.cpp.o -c /users/guest/c/collinam/CS_236/Project_2/Predicate.cpp
+
+CMakeFiles/Project_2_Parser.dir/Predicate.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_2_Parser.dir/Predicate.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/c/collinam/CS_236/Project_2/Predicate.cpp > CMakeFiles/Project_2_Parser.dir/Predicate.cpp.i
+
+CMakeFiles/Project_2_Parser.dir/Predicate.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_2_Parser.dir/Predicate.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/c/collinam/CS_236/Project_2/Predicate.cpp -o CMakeFiles/Project_2_Parser.dir/Predicate.cpp.s
+
+CMakeFiles/Project_2_Parser.dir/Rule.cpp.o: CMakeFiles/Project_2_Parser.dir/flags.make
+CMakeFiles/Project_2_Parser.dir/Rule.cpp.o: ../Rule.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/Project_2_Parser.dir/Rule.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_2_Parser.dir/Rule.cpp.o -c /users/guest/c/collinam/CS_236/Project_2/Rule.cpp
+
+CMakeFiles/Project_2_Parser.dir/Rule.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_2_Parser.dir/Rule.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/c/collinam/CS_236/Project_2/Rule.cpp > CMakeFiles/Project_2_Parser.dir/Rule.cpp.i
+
+CMakeFiles/Project_2_Parser.dir/Rule.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_2_Parser.dir/Rule.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/c/collinam/CS_236/Project_2/Rule.cpp -o CMakeFiles/Project_2_Parser.dir/Rule.cpp.s
+
+CMakeFiles/Project_2_Parser.dir/Parameter.cpp.o: CMakeFiles/Project_2_Parser.dir/flags.make
+CMakeFiles/Project_2_Parser.dir/Parameter.cpp.o: ../Parameter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/Project_2_Parser.dir/Parameter.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_2_Parser.dir/Parameter.cpp.o -c /users/guest/c/collinam/CS_236/Project_2/Parameter.cpp
+
+CMakeFiles/Project_2_Parser.dir/Parameter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_2_Parser.dir/Parameter.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/c/collinam/CS_236/Project_2/Parameter.cpp > CMakeFiles/Project_2_Parser.dir/Parameter.cpp.i
+
+CMakeFiles/Project_2_Parser.dir/Parameter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_2_Parser.dir/Parameter.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/c/collinam/CS_236/Project_2/Parameter.cpp -o CMakeFiles/Project_2_Parser.dir/Parameter.cpp.s
+
 # Object files for target Project_2_Parser
 Project_2_Parser_OBJECTS = \
 "CMakeFiles/Project_2_Parser.dir/AddAutomaton.cpp.o" \
@@ -352,7 +417,12 @@ Project_2_Parser_OBJECTS = \
 "CMakeFiles/Project_2_Parser.dir/StringAutomaton.cpp.o" \
 "CMakeFiles/Project_2_Parser.dir/CommentAutomaton.cpp.o" \
 "CMakeFiles/Project_2_Parser.dir/UndefinedAutomaton.cpp.o" \
-"CMakeFiles/Project_2_Parser.dir/EOFAutomaton.cpp.o"
+"CMakeFiles/Project_2_Parser.dir/EOFAutomaton.cpp.o" \
+"CMakeFiles/Project_2_Parser.dir/Parser.cpp.o" \
+"CMakeFiles/Project_2_Parser.dir/DatalogProgram.cpp.o" \
+"CMakeFiles/Project_2_Parser.dir/Predicate.cpp.o" \
+"CMakeFiles/Project_2_Parser.dir/Rule.cpp.o" \
+"CMakeFiles/Project_2_Parser.dir/Parameter.cpp.o"
 
 # External object files for target Project_2_Parser
 Project_2_Parser_EXTERNAL_OBJECTS =
@@ -378,9 +448,14 @@ Project_2_Parser: CMakeFiles/Project_2_Parser.dir/StringAutomaton.cpp.o
 Project_2_Parser: CMakeFiles/Project_2_Parser.dir/CommentAutomaton.cpp.o
 Project_2_Parser: CMakeFiles/Project_2_Parser.dir/UndefinedAutomaton.cpp.o
 Project_2_Parser: CMakeFiles/Project_2_Parser.dir/EOFAutomaton.cpp.o
+Project_2_Parser: CMakeFiles/Project_2_Parser.dir/Parser.cpp.o
+Project_2_Parser: CMakeFiles/Project_2_Parser.dir/DatalogProgram.cpp.o
+Project_2_Parser: CMakeFiles/Project_2_Parser.dir/Predicate.cpp.o
+Project_2_Parser: CMakeFiles/Project_2_Parser.dir/Rule.cpp.o
+Project_2_Parser: CMakeFiles/Project_2_Parser.dir/Parameter.cpp.o
 Project_2_Parser: CMakeFiles/Project_2_Parser.dir/build.make
 Project_2_Parser: CMakeFiles/Project_2_Parser.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX executable Project_2_Parser"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Linking CXX executable Project_2_Parser"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Project_2_Parser.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

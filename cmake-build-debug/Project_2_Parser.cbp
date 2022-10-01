@@ -112,6 +112,12 @@
 		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/CommentAutomaton.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/DatalogProgram.cpp">
+			<Option target="Project_2_Parser"/>
+		</Unit>
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/DatalogProgram.h">
+			<Option target="Project_2_Parser"/>
+		</Unit>
 		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/EOFAutomaton.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
@@ -148,10 +154,28 @@
 		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/MultiplyAutomaton.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/Parameter.cpp">
+			<Option target="Project_2_Parser"/>
+		</Unit>
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/Parameter.h">
+			<Option target="Project_2_Parser"/>
+		</Unit>
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/Parser.cpp">
+			<Option target="Project_2_Parser"/>
+		</Unit>
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/Parser.h">
+			<Option target="Project_2_Parser"/>
+		</Unit>
 		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/PeriodAutomaton.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
 		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/PeriodAutomaton.h">
+			<Option target="Project_2_Parser"/>
+		</Unit>
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/Predicate.cpp">
+			<Option target="Project_2_Parser"/>
+		</Unit>
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/Predicate.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
 		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/QmarkAutomaton.cpp">
@@ -170,6 +194,12 @@
 			<Option target="Project_2_Parser"/>
 		</Unit>
 		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/RParenAutomaton.h">
+			<Option target="Project_2_Parser"/>
+		</Unit>
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/Rule.cpp">
+			<Option target="Project_2_Parser"/>
+		</Unit>
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/Rule.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
 		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/RulesAutomaton.cpp">
