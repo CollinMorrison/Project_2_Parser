@@ -166,3 +166,7 @@ void Lexer::Run(std::string& input) {
     std::cout << "Total Tokens = " << tokens.size();
 
 }
+
+std::vector<Token*> Lexer::GetTokens() {
+    return this->tokens;
+}

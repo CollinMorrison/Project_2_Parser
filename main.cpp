@@ -3,6 +3,7 @@
 #include <fstream>
 
 #include "Token.h"
+#include "Parser.h"
 
 int main(int argc, char** argv) {
 
@@ -18,17 +19,18 @@ int main(int argc, char** argv) {
             input += data;
         }
     }
-
-    /*
-     * FOR TESTING
-     * Token* token = new Token(TokenType::COMMA, ",", 500);
-     * std::cout << token->ToString() << std::endl;
-     */
+    else {
+        std::cout << "File is not open" << std::endl;
+    }
 
 
     Lexer* lexer = new Lexer();
 
     lexer->Run(input);
+
+    Parser* parser = new Parser(lexer->GetTokens());
+
+    parser->parse();
 
 
     delete lexer;
