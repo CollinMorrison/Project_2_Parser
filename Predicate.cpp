@@ -12,6 +12,6 @@ std::string Predicate::ToString() {
             parameterList += ",";
         }
     }
-    std::string final = this->name + "(" + parameterList + ")";
+    std::string final = this->ID + "(" + parameterList + ")";
     return final;
 }

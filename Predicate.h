@@ -12,9 +12,8 @@
 
 class Predicate {
 private:
-    std::string name;
+    std::string ID;
     std::vector<Parameter*> parameters;
-    TokenType type;
 
 public:
     std::string ToString();
