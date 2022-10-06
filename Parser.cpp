@@ -5,37 +5,6 @@
 #include "Parser.h"
 #include <iostream>
 
-/*
- * private:
- *  tokenVector
- *
- * constructor takes a vector of tokens as a parameter and sets the tokenVector equal to the argument
- *
- * parse(){
- *  parseDatalogProgram()
- * }
- *
- * parseDatalogProgram() {
- *  match(SCHEMES)
- *  match(COLON)
- *  parseScheme()
- * }
- *
- *
- * match(expectedTerminal) {
- *  if (expectedTerminal == currentToken) {
- *      currentToken = nextToken
- *  }
- *  else {
- *      throw an exception
- *  }
- * }
- *
- * parseScheme() {
- *
- * }
- */
-
 
 
 Parser::Parser(std::vector<Token*> inputTokens) {
@@ -53,9 +22,6 @@ void Parser::Parse() {
 
 DatalogProgram* Parser::ParseDatalogProgram() {
     DatalogProgram* newDatalogProgram = new DatalogProgram;
-    /*for (unsigned int i = 0; i < this->tokens.size(); ++i) {
-        std::cout << this->tokens.at(i)->ToString() << std::endl;
-    }*/
     Match(TokenType::SCHEMES);
     Match(TokenType::COLON);
     ParseScheme();
@@ -78,38 +44,32 @@ DatalogProgram* Parser::ParseDatalogProgram() {
 
 void Parser::ParseSchemeList() {
     if (this->currentToken->GetTokenType() == TokenType::ID) {
-        //std::cout << "At beginning of ParseSchemeList" << std::endl;
         ParseScheme();
         //the next token is an ID, which is the start of a scheme
         if (this->currentToken->GetTokenType() == TokenType::ID) {
             ParseSchemeList();
         }
     }
-    //std::cout << "At end of ParseSchemeList" << std::endl;
 }
 
 void Parser::ParseFactList() {
     if (this->currentToken->GetTokenType() == TokenType::ID) {
-        //std::cout << "At beginning of ParseFactList" << std::endl;
         ParseFact();
         //the next token is an ID, which is the start of a fact
         if (this->currentToken->GetTokenType() == TokenType::ID) {
             ParseFactList();
         }
     }
-    //std::cout << "At end of ParseFactList" << std::endl;
 }
 
 void Parser::ParseRuleList() {
     if (this->currentToken->GetTokenType() == TokenType::ID) {
-        //std::cout << "At the start of ParseRuleList" << std::endl;
         ParseRule();
         //The next token is an ID, which is the start of a Rule
         if (this->currentToken->GetTokenType() == TokenType::ID) {
             ParseRuleList();
         }
     }
-    //std::cout << "At the end of ParseRuleList" << std::endl;
 }
 
 void Parser::ParseQueryList() {
@@ -119,7 +79,6 @@ void Parser::ParseQueryList() {
             ParseQueryList();
         }
     }
-    //std::cout << "At the end of ParseQueryList" << std::endl;
 }
 
 void Parser::ParseScheme() {
@@ -128,7 +87,6 @@ void Parser::ParseScheme() {
     Match(TokenType::ID);
     ParseIDList();
     Match(TokenType::RIGHT_PAREN);
-    //std::cout << "At end of ParseScheme" << std::endl;
 }
 
 void Parser::ParseFact() {
@@ -138,7 +96,6 @@ void Parser::ParseFact() {
     ParseStringList();
     Match(TokenType::RIGHT_PAREN);
     Match(TokenType::PERIOD);
-    //std::cout << "At the end of ParseFact" << std::endl;
 }
 
 void Parser::ParseRule() {
@@ -147,13 +104,11 @@ void Parser::ParseRule() {
     ParsePredicate();
     ParsePredicateList();
     Match(TokenType::PERIOD);
-    //std::cout << "At the end of ParseRule" << std::endl;
 }
 
 void Parser::ParseQuery() {
     ParsePredicate();
     Match(TokenType::Q_MARK);
-    //std::cout << "At the end of ParseQuery" << std::endl;
 }
 
 void Parser::ParseHeadPredicate() {
@@ -162,7 +117,6 @@ void Parser::ParseHeadPredicate() {
     Match(TokenType::ID);
     ParseIDList();
     Match(TokenType::RIGHT_PAREN);
-    //std::cout << "At the end of ParseHeadPredicate" << std::endl;
 }
 
 void Parser::ParsePredicate() {
@@ -171,43 +125,36 @@ void Parser::ParsePredicate() {
     ParseParameter();
     ParseParameterList();
     Match(TokenType::RIGHT_PAREN);
-    //std::cout << "At the end of ParsePredicate" << std::endl;
 }
 
 void Parser::ParsePredicateList() {
     if (this->currentToken->GetTokenType() == TokenType::COMMA) {
-        std::cout << "At the beginning of ParsePredicateList" << std::endl;
         Match(TokenType::COMMA);
         ParsePredicate();
         if (this->currentToken->GetTokenType() == TokenType::COMMA) {
             ParsePredicateList();
         }
     }
-    //std::cout << "At the end of ParsePredicateList"<< std::endl;
 }
 
 void Parser::ParseParameterList() {
     if (this->currentToken->GetTokenType() == TokenType::COMMA) {
-        //std::cout << "At the beginning of ParseParameterList" << std::endl;
         Match(TokenType::COMMA);
         ParseParameter();
         if (this->currentToken->GetTokenType() == TokenType::COMMA) {
             ParseParameterList();
         }
     }
-    //std::cout << "At the end of ParseParameterList" << std::endl;
 }
 
 void Parser::ParseStringList() {
     if (this->currentToken->GetTokenType() == TokenType::COMMA) {
-        //std::cout << "At the beginning of ParseStringList" << std::endl;
         Match(TokenType::COMMA);
         Match(TokenType::STRING);
         if (this->currentToken->GetTokenType() == TokenType::COMMA) {
             ParseStringList();
         }
     }
-    //std::cout << "At the end of ParseStringList" << std::endl;
 }
 
 void Parser::ParseIDList() {
@@ -218,7 +165,6 @@ void Parser::ParseIDList() {
             ParseIDList();
         }
     }
-    //std::cout << "At end of parseIDList" << std::endl;
 }
 
 void Parser::ParseParameter() {
@@ -231,7 +177,6 @@ void Parser::ParseParameter() {
     else {
         throw this->currentToken;
     }
-    //std::cout << "At the end of ParseParameter" << std::endl;
 }
 
 
@@ -246,4 +191,3 @@ void Parser::Match(TokenType type) {
         this->currentToken = tokens.at(this->iterator);
     }
 }
-//Returns a DatalogProgram object, which you then traverse using recursive descent, printing out information as necessary

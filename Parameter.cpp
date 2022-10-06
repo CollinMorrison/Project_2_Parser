@@ -3,3 +3,7 @@
 //
 
 #include "Parameter.h"
+
+std::string Parameter::GetValue() {
+    return this->value;
+}
