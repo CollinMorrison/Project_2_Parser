@@ -7,7 +7,8 @@
 
 
 class DatalogProgram {
-
+public:
+    DatalogProgram();
 };
 
 

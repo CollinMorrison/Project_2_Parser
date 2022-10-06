@@ -74,3 +74,7 @@ std::string Token::enumToString(TokenType tokenType) {
         return "UNDEFINED";
     }
 }
+
+TokenType Token::GetTokenType() {
+    return this->type;
+}

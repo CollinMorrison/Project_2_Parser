@@ -1,9 +1,9 @@
 # COPYRIGHT © BRIGHAM YOUNG UNIVERSITY CS 236
 # FOR USE ONLY DURING SPRING 2021 SEMESTER
-# passoffInput26     SUCCESS
+# passoffInput27     FAILURE RightParen,4
 Schemes:
 
-noDeath( n , d )
+shouldCrashHere()
 
 Facts:
 
@@ -11,4 +11,4 @@ Rules:
 
 Queries:
 
-noDeath( 'no' , 'Death' )?
+alsoBadSyntax()?

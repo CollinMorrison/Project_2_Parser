@@ -142,7 +142,9 @@ void Lexer::Run(std::string& input) {
         //valid token
         if (maxRead > 0) {
             newToken = maxAutomaton->CreateToken(input.substr(0, maxRead), lineNumber);
-            tokens.push_back(newToken);
+            if (newToken->GetTokenType() != TokenType::COMMENT) {
+                tokens.push_back(newToken);
+            }
             lineNumber += newLinesInToken;
         }
         //Token is undefined
@@ -150,7 +152,9 @@ void Lexer::Run(std::string& input) {
             maxRead = 1;
             if (!isspace(input.at(0))) {
                 newToken = new Token(TokenType::UNDEFINED, input.substr(0, maxRead), lineNumber);
-                tokens.push_back(newToken);
+                if (newToken->GetTokenType() != TokenType::COMMENT) {
+                    tokens.push_back(newToken);
+                }
                 lineNumber += newLinesInToken;
             }
         }
@@ -160,10 +164,10 @@ void Lexer::Run(std::string& input) {
     tokens.push_back(new Token(TokenType::EOF_TYPE, "", lineNumber));
     lineNumber += newLinesInToken;
 
-    for (unsigned int i = 0; i < tokens.size(); ++i) {
+    /*for (unsigned int i = 0; i < tokens.size(); ++i) {
         std::cout << tokens.at(i)->ToString() << std::endl;
     }
-    std::cout << "Total Tokens = " << tokens.size();
+    std::cout << "Total Tokens = " << tokens.size();*/
 
 }
 

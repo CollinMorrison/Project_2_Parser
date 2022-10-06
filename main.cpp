@@ -30,7 +30,7 @@ int main(int argc, char** argv) {
 
     Parser* parser = new Parser(lexer->GetTokens());
 
-    parser->parse();
+    parser->Parse();
 
 
     delete lexer;

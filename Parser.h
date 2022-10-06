@@ -12,9 +12,28 @@
 class Parser {
 private:
     std::vector<Token*> tokens;
+    Token* currentToken;
+    int iterator = 0;
 public:
     Parser(std::vector<Token*> inputTokens);
-    DatalogProgram parse();
+    void Parse();
+    void Match(TokenType type);
+    DatalogProgram* ParseDatalogProgram();
+    void ParseSchemeList();
+    void ParseFactList();
+    void ParseRuleList();
+    void ParseQueryList();
+    void ParseScheme();
+    void ParseFact();
+    void ParseRule();
+    void ParseQuery();
+    void ParseHeadPredicate();
+    void ParsePredicate();
+    void ParsePredicateList();
+    void ParseParameterList();
+    void ParseStringList();
+    void ParseIDList();
+    void ParseParameter();
 };
 
 
