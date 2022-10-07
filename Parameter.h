@@ -12,6 +12,7 @@ class Parameter {
 private:
     std::string value;
 public:
+    explicit Parameter(std::string newValue);
     std::string GetValue();
 };
 

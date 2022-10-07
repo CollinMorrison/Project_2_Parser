@@ -16,8 +16,9 @@ private:
     std::vector<Parameter*> parameters;
 
 public:
+    Predicate(std::string newID= " ", std::vector<Parameter*> newParameters = {});
     std::string ToString();
-
+    std::vector<Parameter*> GetParameters();
 };
 
 

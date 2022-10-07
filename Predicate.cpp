@@ -4,6 +4,11 @@
 
 #include "Predicate.h"
 
+Predicate::Predicate(std::string newID, std::vector<Parameter*> newParameters) {
+    this->ID = newID;
+    this->parameters = newParameters;
+}
+
 std::string Predicate::ToString() {
     std::string parameterList;
     for (unsigned int i = 0; i < this->parameters.size(); ++i) {
@@ -14,4 +19,8 @@ std::string Predicate::ToString() {
     }
     std::string final = this->ID + "(" + parameterList + ")";
     return final;
+}
+
+std::vector<Parameter*> Predicate::GetParameters() {
+    return this->parameters;
 }

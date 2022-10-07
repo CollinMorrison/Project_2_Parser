@@ -14,6 +14,7 @@ private:
     Predicate head;
     std::vector<Predicate> body;
 public:
+    Rule(Predicate newHead, std::vector<Predicate> newBody);
     std::string ToString();
 };
 

@@ -4,6 +4,7 @@
 
 #include "DatalogProgram.h"
 #include <iostream>
+#include <set>
 
 
 DatalogProgram::DatalogProgram() {
@@ -16,6 +17,8 @@ std::string DatalogProgram::ToString() {
     std::string factsString;
     std::string rulesString;
     std::string queriesString;
+    std::string domainString;
+    std::set<std::string> domainSet;
     for (unsigned int i = 0; i < this->schemes.size(); ++i) {
         schemesString += this->schemes.at(i).ToString();
         schemesString += "\n";
@@ -32,14 +35,25 @@ std::string DatalogProgram::ToString() {
         queriesString += this->queries.at(i).ToString();
         queriesString += "?\n";
     }
-    final = "Schemes(" + std::to_string(schemes.size()) + ")\n"
+    for (unsigned int i = 0; i < this->facts.size(); ++i) {
+        for (unsigned int j = 0; j < this->facts.at(i).GetParameters().size(); ++j) {
+            domainSet.insert(this->facts.at(i).GetParameters().at(j)->GetValue());
+        }
+    }
+    for (auto itr : domainSet) {
+        domainString += "'";
+        domainString += itr;
+        domainString += "'\n";
+    }
+    final = "Schemes(" + std::to_string(schemes.size()) + ")\n  "
             + schemesString
-            + "Facts(" + std::to_string(facts.size()) + ")\n"
+            + "Facts(" + std::to_string(facts.size()) + ")\n  "
             + factsString
-            + "Rules(" + std::to_string(rules.size()) + ")\n"
+            + "Rules(" + std::to_string(rules.size()) + ")\n  "
             + rulesString
-            + "Queries(" + std::to_string(queries.size()) + ")\n"
+            + "Queries(" + std::to_string(queries.size()) + ")\n  "
             + queriesString;
-            //+ "Domain (" + std::to_string()
+            + "Domain (" + std::to_string(domainSet.size()) + ")\n  "
+            + domainString;
     return final;
 }

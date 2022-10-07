@@ -14,7 +14,7 @@ Parser::Parser(std::vector<Token*> inputTokens) {
 
 void Parser::Parse() {
     try {
-        ParseDatalogProgram();
+        std::cout << ParseDatalogProgram()->ToString();
     } catch (Token* error) {
         std::cout << "Failure!" << std::endl << "  " << error->ToString() << std::endl;
     }
@@ -38,7 +38,6 @@ DatalogProgram* Parser::ParseDatalogProgram() {
     ParseQueryList();
     Match(TokenType::EOF_TYPE);
     std::cout << "Success!" << std::endl;
-
     return newDatalogProgram;
 }
 

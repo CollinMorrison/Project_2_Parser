@@ -4,6 +4,9 @@
 
 #ifndef PROJECT_2_PARSER_PARSER_H
 #define PROJECT_2_PARSER_PARSER_H
+#include "Predicate.h"
+#include "Parameter.h"
+#include "Rule.h"
 #include "DatalogProgram.h"
 #include "Lexer.h"
 #include "Token.h"

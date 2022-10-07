@@ -4,6 +4,11 @@
 
 #include "Rule.h"
 
+Rule::Rule(Predicate newHead, std::vector<Predicate> newBody) {
+    this->head = newHead;
+    this->body = newBody;
+}
+
 std::string Rule::ToString() {
     std::string final;
     std::string list;

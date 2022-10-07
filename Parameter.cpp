@@ -4,6 +4,10 @@
 
 #include "Parameter.h"
 
+Parameter::Parameter(std::string newValue) {
+    this->value = newValue;
+}
+
 std::string Parameter::GetValue() {
     return this->value;
 }
