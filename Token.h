@@ -43,6 +43,7 @@ public:
     std::string enumToString(TokenType tokenType);
 
     TokenType GetTokenType();
+    std::string GetValue();
 
     // TODO: add other needed methods
 };

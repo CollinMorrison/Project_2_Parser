@@ -26,6 +26,7 @@ DatalogProgram* Parser::ParseDatalogProgram() {
     Match(TokenType::COLON);
     ParseScheme();
     ParseSchemeList();
+    //newDatalogProgram->AddScheme();
     Match(TokenType::FACTS);
     Match(TokenType::COLON);
     ParseFactList();
@@ -81,6 +82,7 @@ void Parser::ParseQueryList() {
 }
 
 void Parser::ParseScheme() {
+    this->tempID = currentToken->GetValue();
     Match(TokenType::ID);
     Match(TokenType::LEFT_PAREN);
     Match(TokenType::ID);

@@ -20,6 +20,10 @@ private:
 public:
     DatalogProgram();
     std::string ToString();
+    void AddScheme(Predicate newScheme);
+    void AddFact(Predicate newFact);
+    void AddQuery(Predicate newQuery);
+    void AddRule(Rule newRule);
 };
 
 

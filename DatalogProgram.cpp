@@ -57,3 +57,19 @@ std::string DatalogProgram::ToString() {
             + domainString;
     return final;
 }
+
+void DatalogProgram::AddScheme(Predicate newScheme) {
+    this->schemes.push_back(newScheme);
+}
+
+void DatalogProgram::AddFact(Predicate newFact) {
+    this->facts.push_back(newFact);
+}
+
+void DatalogProgram::AddQuery(Predicate newQuery) {
+    this->queries.push_back(newQuery);
+}
+
+void DatalogProgram::AddRule(Rule newRule) {
+    this->rules.push_back(newRule);
+}

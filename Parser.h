@@ -17,6 +17,8 @@ private:
     std::vector<Token*> tokens;
     Token* currentToken;
     int iterator = 0;
+    std::string tempID;
+    std::vector<Parameter*> tempParameters;
 public:
     Parser(std::vector<Token*> inputTokens);
     void Parse();

@@ -78,3 +78,7 @@ std::string Token::enumToString(TokenType tokenType) {
 TokenType Token::GetTokenType() {
     return this->type;
 }
+
+std::string Token::GetValue() {
+    return this->value;
+}
