@@ -4,10 +4,13 @@
 
 #include "Parameter.h"
 
-Parameter::Parameter(std::string newValue) {
-    this->value = newValue;
+Parameter::Parameter() {
 }
 
 std::string Parameter::GetValue() {
     return this->value;
+}
+
+void Parameter::SetValue(std::string newValue) {
+    this->value = newValue;
 }

@@ -13,17 +13,17 @@
 
 class DatalogProgram {
 private:
-    std::vector<Predicate> schemes;
-    std::vector<Predicate> facts;
-    std::vector<Predicate> queries;
-    std::vector<Rule> rules;
+    std::vector<Predicate*> schemes;
+    std::vector<Predicate*> facts;
+    std::vector<Predicate*> queries;
+    std::vector<Rule*> rules;
 public:
     DatalogProgram();
     std::string ToString();
-    void AddScheme(Predicate newScheme);
-    void AddFact(Predicate newFact);
-    void AddQuery(Predicate newQuery);
-    void AddRule(Rule newRule);
+    void AddScheme(Predicate* newScheme);
+    void AddFact(Predicate* newFact);
+    void AddQuery(Predicate* newQuery);
+    void AddRule(Rule* newRule);
 };
 
 

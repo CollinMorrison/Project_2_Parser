@@ -4,9 +4,7 @@
 
 #include "Predicate.h"
 
-Predicate::Predicate(std::string newID, std::vector<Parameter*> newParameters) {
-    this->ID = newID;
-    this->parameters = newParameters;
+Predicate::Predicate() {
 }
 
 std::string Predicate::ToString() {
@@ -23,4 +21,12 @@ std::string Predicate::ToString() {
 
 std::vector<Parameter*> Predicate::GetParameters() {
     return this->parameters;
+}
+
+void Predicate::SetID(std::string newID) {
+    this->ID = newID;
+}
+
+void Predicate::AddParameter(Parameter *newParameter) {
+    this->parameters.push_back(newParameter);
 }

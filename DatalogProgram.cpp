@@ -20,24 +20,24 @@ std::string DatalogProgram::ToString() {
     std::string domainString;
     std::set<std::string> domainSet;
     for (unsigned int i = 0; i < this->schemes.size(); ++i) {
-        schemesString += this->schemes.at(i).ToString();
+        schemesString += this->schemes.at(i)->ToString();
         schemesString += "\n";
     }
     for (unsigned int i = 0; i < this->facts.size(); ++i) {
-        factsString += this->facts.at(i).ToString();
+        factsString += this->facts.at(i)->ToString();
         factsString += ".\n";
     }
     for (unsigned int i = 0; i < this->rules.size(); ++i) {
-        rulesString += this->rules.at(i).ToString();
+        rulesString += this->rules.at(i)->ToString();
         rulesString += ".\n";
     }
     for (unsigned int i = 0; i < this->queries.size(); ++i) {
-        queriesString += this->queries.at(i).ToString();
+        queriesString += this->queries.at(i)->ToString();
         queriesString += "?\n";
     }
     for (unsigned int i = 0; i < this->facts.size(); ++i) {
-        for (unsigned int j = 0; j < this->facts.at(i).GetParameters().size(); ++j) {
-            domainSet.insert(this->facts.at(i).GetParameters().at(j)->GetValue());
+        for (unsigned int j = 0; j < this->facts.at(i)->GetParameters().size(); ++j) {
+            domainSet.insert(this->facts.at(i)->GetParameters().at(j)->GetValue());
         }
     }
     for (auto itr : domainSet) {
@@ -58,18 +58,18 @@ std::string DatalogProgram::ToString() {
     return final;
 }
 
-void DatalogProgram::AddScheme(Predicate newScheme) {
+void DatalogProgram::AddScheme(Predicate* newScheme) {
     this->schemes.push_back(newScheme);
 }
 
-void DatalogProgram::AddFact(Predicate newFact) {
+void DatalogProgram::AddFact(Predicate* newFact) {
     this->facts.push_back(newFact);
 }
 
-void DatalogProgram::AddQuery(Predicate newQuery) {
+void DatalogProgram::AddQuery(Predicate* newQuery) {
     this->queries.push_back(newQuery);
 }
 
-void DatalogProgram::AddRule(Rule newRule) {
+void DatalogProgram::AddRule(Rule* newRule) {
     this->rules.push_back(newRule);
 }

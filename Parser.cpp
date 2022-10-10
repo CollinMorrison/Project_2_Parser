@@ -21,7 +21,6 @@ void Parser::Parse() {
 }
 
 DatalogProgram* Parser::ParseDatalogProgram() {
-    DatalogProgram* newDatalogProgram = new DatalogProgram;
     Match(TokenType::SCHEMES);
     Match(TokenType::COLON);
     ParseScheme();
@@ -82,11 +81,14 @@ void Parser::ParseQueryList() {
 }
 
 void Parser::ParseScheme() {
-    this->tempID = currentToken->GetValue();
+    this->tempScheme->SetID(this->currentToken->GetValue());
     Match(TokenType::ID);
     Match(TokenType::LEFT_PAREN);
+    tempParameter->SetValue(this->currentToken->GetValue());
+    this->tempScheme->AddParameter(this->tempParameter);
     Match(TokenType::ID);
     ParseIDList();
+    this->newDatalogProgram->AddScheme(this->tempScheme);
     Match(TokenType::RIGHT_PAREN);
 }
 
@@ -161,6 +163,8 @@ void Parser::ParseStringList() {
 void Parser::ParseIDList() {
     if (this->currentToken->GetTokenType() == TokenType::COMMA) {
         Match(TokenType::COMMA);
+        this->tempParameter->SetValue(this->currentToken->GetValue());
+        this->tempScheme->AddParameter(this->tempParameter);
         Match(TokenType::ID);
         if (this->currentToken->GetTokenType() == TokenType::COMMA) {
             ParseIDList();

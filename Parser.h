@@ -14,9 +14,12 @@
 
 class Parser {
 private:
+    DatalogProgram* newDatalogProgram = new DatalogProgram;
     std::vector<Token*> tokens;
     Token* currentToken;
     int iterator = 0;
+    Predicate* tempScheme = new Predicate();
+    Parameter* tempParameter = new Parameter;
     std::string tempID;
     std::vector<Parameter*> tempParameters;
 public:

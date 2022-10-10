@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug"/>
+				<Option working_dir="/users/guest/c/collinam/CS_236/Project_2_new/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug"/>
+				<Option working_dir="/users/guest/c/collinam/CS_236/Project_2_new/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug"/>
+				<Option working_dir="/users/guest/c/collinam/CS_236/Project_2_new/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Project_2_Parser">
-				<Option output="/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug/Project_2_Parser" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug"/>
+				<Option output="/users/guest/c/collinam/CS_236/Project_2_new/cmake-build-debug/Project_2_Parser" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/users/guest/c/collinam/CS_236/Project_2_new/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,15 +53,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 Project_2_Parser"/>
-					<CompileFile command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 Project_2_Parser"/>
+					<CompileFile command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Project_2_Parser/fast">
-				<Option output="/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug/Project_2_Parser" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug"/>
+				<Option output="/users/guest/c/collinam/CS_236/Project_2_new/cmake-build-debug/Project_2_Parser" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/users/guest/c/collinam/CS_236/Project_2_new/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -75,167 +75,167 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 Project_2_Parser/fast"/>
-					<CompileFile command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 Project_2_Parser/fast"/>
+					<CompileFile command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j20 -f &quot;/users/guest/c/collinam/CS_236/Project_2_new/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/AddAutomaton.cpp">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/AddAutomaton.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/AddAutomaton.h">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/AddAutomaton.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/ColonAutomaton.cpp">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/ColonAutomaton.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/ColonAutomaton.h">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/ColonAutomaton.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/ColonDashAutomaton.cpp">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/ColonDashAutomaton.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/ColonDashAutomaton.h">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/ColonDashAutomaton.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/CommaAutomaton.cpp">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/CommaAutomaton.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/CommaAutomaton.h">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/CommaAutomaton.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/CommentAutomaton.cpp">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/CommentAutomaton.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/CommentAutomaton.h">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/CommentAutomaton.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/DatalogProgram.cpp">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/DatalogProgram.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/DatalogProgram.h">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/DatalogProgram.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/EOFAutomaton.cpp">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/EOFAutomaton.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/EOFAutomaton.h">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/EOFAutomaton.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/FactsAutomaton.cpp">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/FactsAutomaton.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/FactsAutomaton.h">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/FactsAutomaton.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/IDAutomaton.cpp">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/IDAutomaton.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/IDAutomaton.h">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/IDAutomaton.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/LParenAutomaton.cpp">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/LParenAutomaton.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/LParenAutomaton.h">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/LParenAutomaton.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/Lexer.cpp">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/Lexer.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/Lexer.h">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/Lexer.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/MultiplyAutomaton.cpp">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/MultiplyAutomaton.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/MultiplyAutomaton.h">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/MultiplyAutomaton.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/Parameter.cpp">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/Parameter.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/Parameter.h">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/Parameter.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/Parser.cpp">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/Parser.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/Parser.h">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/Parser.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/PeriodAutomaton.cpp">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/PeriodAutomaton.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/PeriodAutomaton.h">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/PeriodAutomaton.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/Predicate.cpp">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/Predicate.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/Predicate.h">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/Predicate.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/QmarkAutomaton.cpp">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/QmarkAutomaton.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/QmarkAutomaton.h">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/QmarkAutomaton.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/QueriesAutomaton.cpp">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/QueriesAutomaton.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/QueriesAutomaton.h">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/QueriesAutomaton.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/RParenAutomaton.cpp">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/RParenAutomaton.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/RParenAutomaton.h">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/RParenAutomaton.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/Rule.cpp">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/Rule.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/Rule.h">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/Rule.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/RulesAutomaton.cpp">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/RulesAutomaton.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/RulesAutomaton.h">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/RulesAutomaton.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/SchemesAutomaton.cpp">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/SchemesAutomaton.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/SchemesAutomaton.h">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/SchemesAutomaton.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/StringAutomaton.cpp">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/StringAutomaton.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/StringAutomaton.h">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/StringAutomaton.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/Token.cpp">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/Token.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/Token.h">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/Token.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/UndefinedAutomaton.cpp">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/UndefinedAutomaton.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/UndefinedAutomaton.h">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/UndefinedAutomaton.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/main.cpp">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/main.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
-		<Unit filename="/users/guest/c/collinam/CS_236/Project_2/CMakeLists.txt">
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

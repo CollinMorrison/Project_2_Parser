@@ -26,6 +26,13 @@ CMakeFiles/Project_2_Parser.dir/CommentAutomaton.cpp.o
  /users/guest/c/collinam/CS_236/Project_2/CommentAutomaton.cpp
  /users/guest/c/collinam/CS_236/Project_2/CommentAutomaton.h
  /users/guest/c/collinam/CS_236/Project_2/Token.h
+CMakeFiles/Project_2_Parser.dir/DatalogProgram.cpp.o
+ /users/guest/c/collinam/CS_236/Project_2/DatalogProgram.cpp
+ /users/guest/c/collinam/CS_236/Project_2/DatalogProgram.h
+ /users/guest/c/collinam/CS_236/Project_2/Parameter.h
+ /users/guest/c/collinam/CS_236/Project_2/Predicate.h
+ /users/guest/c/collinam/CS_236/Project_2/Rule.h
+ /users/guest/c/collinam/CS_236/Project_2/Token.h
 CMakeFiles/Project_2_Parser.dir/EOFAutomaton.cpp.o
  /users/guest/c/collinam/CS_236/Project_2/Automaton.h
  /users/guest/c/collinam/CS_236/Project_2/EOFAutomaton.cpp
@@ -74,10 +81,28 @@ CMakeFiles/Project_2_Parser.dir/MultiplyAutomaton.cpp.o
  /users/guest/c/collinam/CS_236/Project_2/MultiplyAutomaton.cpp
  /users/guest/c/collinam/CS_236/Project_2/MultiplyAutomaton.h
  /users/guest/c/collinam/CS_236/Project_2/Token.h
+CMakeFiles/Project_2_Parser.dir/Parameter.cpp.o
+ /users/guest/c/collinam/CS_236/Project_2/Parameter.cpp
+ /users/guest/c/collinam/CS_236/Project_2/Parameter.h
+CMakeFiles/Project_2_Parser.dir/Parser.cpp.o
+ /users/guest/c/collinam/CS_236/Project_2/Automaton.h
+ /users/guest/c/collinam/CS_236/Project_2/DatalogProgram.h
+ /users/guest/c/collinam/CS_236/Project_2/Lexer.h
+ /users/guest/c/collinam/CS_236/Project_2/Parameter.h
+ /users/guest/c/collinam/CS_236/Project_2/Parser.cpp
+ /users/guest/c/collinam/CS_236/Project_2/Parser.h
+ /users/guest/c/collinam/CS_236/Project_2/Predicate.h
+ /users/guest/c/collinam/CS_236/Project_2/Rule.h
+ /users/guest/c/collinam/CS_236/Project_2/Token.h
 CMakeFiles/Project_2_Parser.dir/PeriodAutomaton.cpp.o
  /users/guest/c/collinam/CS_236/Project_2/Automaton.h
  /users/guest/c/collinam/CS_236/Project_2/PeriodAutomaton.cpp
  /users/guest/c/collinam/CS_236/Project_2/PeriodAutomaton.h
+ /users/guest/c/collinam/CS_236/Project_2/Token.h
+CMakeFiles/Project_2_Parser.dir/Predicate.cpp.o
+ /users/guest/c/collinam/CS_236/Project_2/Parameter.h
+ /users/guest/c/collinam/CS_236/Project_2/Predicate.cpp
+ /users/guest/c/collinam/CS_236/Project_2/Predicate.h
  /users/guest/c/collinam/CS_236/Project_2/Token.h
 CMakeFiles/Project_2_Parser.dir/QmarkAutomaton.cpp.o
  /users/guest/c/collinam/CS_236/Project_2/Automaton.h
@@ -93,6 +118,12 @@ CMakeFiles/Project_2_Parser.dir/RParenAutomaton.cpp.o
  /users/guest/c/collinam/CS_236/Project_2/Automaton.h
  /users/guest/c/collinam/CS_236/Project_2/RParenAutomaton.cpp
  /users/guest/c/collinam/CS_236/Project_2/RParenAutomaton.h
+ /users/guest/c/collinam/CS_236/Project_2/Token.h
+CMakeFiles/Project_2_Parser.dir/Rule.cpp.o
+ /users/guest/c/collinam/CS_236/Project_2/Parameter.h
+ /users/guest/c/collinam/CS_236/Project_2/Predicate.h
+ /users/guest/c/collinam/CS_236/Project_2/Rule.cpp
+ /users/guest/c/collinam/CS_236/Project_2/Rule.h
  /users/guest/c/collinam/CS_236/Project_2/Token.h
 CMakeFiles/Project_2_Parser.dir/RulesAutomaton.cpp.o
  /users/guest/c/collinam/CS_236/Project_2/Automaton.h
@@ -119,6 +150,11 @@ CMakeFiles/Project_2_Parser.dir/UndefinedAutomaton.cpp.o
  /users/guest/c/collinam/CS_236/Project_2/UndefinedAutomaton.h
 CMakeFiles/Project_2_Parser.dir/main.cpp.o
  /users/guest/c/collinam/CS_236/Project_2/Automaton.h
+ /users/guest/c/collinam/CS_236/Project_2/DatalogProgram.h
  /users/guest/c/collinam/CS_236/Project_2/Lexer.h
+ /users/guest/c/collinam/CS_236/Project_2/Parameter.h
+ /users/guest/c/collinam/CS_236/Project_2/Parser.h
+ /users/guest/c/collinam/CS_236/Project_2/Predicate.h
+ /users/guest/c/collinam/CS_236/Project_2/Rule.h
  /users/guest/c/collinam/CS_236/Project_2/Token.h
  /users/guest/c/collinam/CS_236/Project_2/main.cpp
