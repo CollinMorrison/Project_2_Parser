@@ -21,6 +21,7 @@ public:
     std::vector<Parameter> GetParameters();
     void SetID(std::string newID);
     void AddParameter(Parameter newParameter);
+    void ClearParameters();
 };
 
 

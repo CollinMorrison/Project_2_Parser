@@ -21,6 +21,8 @@ private:
     Predicate tempScheme;
     Parameter tempParameter;
     Predicate tempFact;
+    Predicate tempHeadPredicate;
+    Rule tempRule;
     //std::string tempID;
     //std::vector<Parameter*> tempParameters;
 public:
@@ -43,6 +45,7 @@ public:
     void ParseStringList();
     void ParseIDList();
     void ParseParameter();
+    void ClearTempParameters();
 };
 
 

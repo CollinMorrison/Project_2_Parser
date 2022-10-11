@@ -4,9 +4,7 @@
 
 #include "Rule.h"
 
-Rule::Rule(Predicate newHead, std::vector<Predicate> newBody) {
-    this->head = newHead;
-    this->body = newBody;
+Rule::Rule() {
 }
 
 std::string Rule::ToString() {
@@ -20,4 +18,12 @@ std::string Rule::ToString() {
     }
     final = this->head.ToString() + " :- " + list;
     return final;
+}
+
+void Rule::SetHead(Predicate headToSet) {
+    this->head = headToSet;
+}
+
+void Rule::AddToBody(Predicate itemToAdd) {
+    this->body.push_back(itemToAdd);
 }

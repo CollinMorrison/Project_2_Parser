@@ -29,8 +29,10 @@ void Predicate::SetID(std::string newID) {
 
 void Predicate::AddParameter(Parameter newParameter) {
     this->parameters.push_back(newParameter);
-    for (int i = 0; i < this->parameters.size(); ++i) {
-        std::cout << this->parameters.at(i).GetValue() << ",";
+}
+
+void Predicate::ClearParameters() {
+    while (!this->parameters.empty()) {
+        this->parameters.pop_back();
     }
-    std::cout << std::endl;
 }

@@ -92,6 +92,7 @@ void Parser::ParseScheme() {
     ParseIDList();
     //Add the temp scheme to the datalog list of schemes
     this->newDatalogProgram->AddScheme(this->tempScheme);
+    ClearTempParameters();
     Match(TokenType::RIGHT_PAREN);
 }
 
@@ -107,6 +108,7 @@ void Parser::ParseFact() {
     ParseStringList();
     //Add the tempFact to the list of facts
     this->newDatalogProgram->AddFact(this->tempFact);
+    ClearTempParameters();
     Match(TokenType::RIGHT_PAREN);
     Match(TokenType::PERIOD);
 }
@@ -115,8 +117,11 @@ void Parser::ParseRule() {
     ParseHeadPredicate();
     Match(TokenType::COLON_DASH);
     ParsePredicate();
+    this->tempRule.AddToBody(this->tempScheme);
+    ClearTempParameters();
     ParsePredicateList();
     Match(TokenType::PERIOD);
+    this->newDatalogProgram->AddRule(tempRule);
 }
 
 void Parser::ParseQuery() {
@@ -125,14 +130,25 @@ void Parser::ParseQuery() {
 }
 
 void Parser::ParseHeadPredicate() {
+    //Set tempScheme ID
+    this->tempScheme.SetID(this->currentToken->GetValue());
     Match(TokenType::ID);
     Match(TokenType::LEFT_PAREN);
+    //Set and push first parameter
+    this->tempParameter.SetValue(this->currentToken->GetValue());
+    this->tempScheme.AddParameter(this->tempParameter);
     Match(TokenType::ID);
     ParseIDList();
+    //Set tempHeadPredicate
+    this->tempHeadPredicate = this->tempScheme;
+    this->tempRule.SetHead(tempHeadPredicate);
+    ClearTempParameters();
     Match(TokenType::RIGHT_PAREN);
 }
 
 void Parser::ParsePredicate() {
+    //Set tempScheme ID
+    this->tempScheme.SetID(this->currentToken->GetValue());
     Match(TokenType::ID);
     Match(TokenType::LEFT_PAREN);
     ParseParameter();
@@ -143,6 +159,8 @@ void Parser::ParsePredicate() {
 void Parser::ParsePredicateList() {
     if (this->currentToken->GetTokenType() == TokenType::COMMA) {
         Match(TokenType::COMMA);
+        this->tempRule.AddToBody(this->tempScheme);
+        ClearTempParameters();
         ParsePredicate();
         if (this->currentToken->GetTokenType() == TokenType::COMMA) {
             ParsePredicateList();
@@ -179,7 +197,6 @@ void Parser::ParseIDList() {
         //set and push the next parameter to the temporary scheme
         this->tempParameter.SetValue(this->currentToken->GetValue());
         this->tempScheme.AddParameter(this->tempParameter);
-        std::cout << this->tempScheme.ToString();
         Match(TokenType::ID);
         if (this->currentToken->GetTokenType() == TokenType::COMMA) {
             ParseIDList();
@@ -189,9 +206,15 @@ void Parser::ParseIDList() {
 
 void Parser::ParseParameter() {
     if (this->currentToken->GetTokenType() == TokenType::STRING) {
+        //Add and push the parameter
+        this->tempParameter.SetValue(this->currentToken->GetValue());
+        this->tempScheme.AddParameter(this->tempParameter);
         Match(TokenType::STRING);
     }
     else if (this->currentToken->GetTokenType() == TokenType::ID) {
+        //Add and push the parameter
+        this->tempParameter.SetValue(this->currentToken->GetValue());
+        this->tempScheme.AddParameter(this->tempParameter);
         Match(TokenType::ID);
     }
     else {
@@ -210,4 +233,9 @@ void Parser::Match(TokenType type) {
         this->iterator++;
         this->currentToken = tokens.at(this->iterator);
     }
+}
+
+void Parser::ClearTempParameters() {
+    this->tempScheme.ClearParameters();
+    this->tempFact.ClearParameters();
 }

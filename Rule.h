@@ -14,8 +14,10 @@ private:
     Predicate head;
     std::vector<Predicate> body;
 public:
-    Rule(Predicate newHead, std::vector<Predicate> newBody);
+    Rule();
     std::string ToString();
+    void SetHead(Predicate headToSet);
+    void AddToBody(Predicate itemToAdd);
 };
 
 
