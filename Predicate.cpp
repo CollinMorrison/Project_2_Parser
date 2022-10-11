@@ -32,7 +32,5 @@ void Predicate::AddParameter(Parameter newParameter) {
 }
 
 void Predicate::ClearParameters() {
-    while (!this->parameters.empty()) {
-        this->parameters.pop_back();
-    }
+    this->parameters.clear();
 }

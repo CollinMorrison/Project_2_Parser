@@ -121,6 +121,7 @@ void Parser::ParseRule() {
     ParsePredicateList();
     Match(TokenType::PERIOD);
     this->newDatalogProgram->AddRule(tempRule);
+    ClearTempRuleBody();
 }
 
 void Parser::ParseQuery() {
@@ -239,4 +240,8 @@ void Parser::Match(TokenType type) {
 void Parser::ClearTempParameters() {
     this->tempScheme.ClearParameters();
     this->tempFact.ClearParameters();
+}
+
+void Parser::ClearTempRuleBody() {
+    this->tempRule.ClearBody();
 }

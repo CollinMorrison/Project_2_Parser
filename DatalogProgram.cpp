@@ -49,15 +49,15 @@ std::string DatalogProgram::ToString() {
         domainString += itr;
         domainString += "\n";
     }
-    final = "Schemes(" + std::to_string(schemes.size()) + ")\n"
+    final = "Schemes(" + std::to_string(schemes.size()) + "):\n"
             + schemesString
-            + "Facts(" + std::to_string(facts.size()) + ")\n"
+            + "Facts(" + std::to_string(facts.size()) + "):\n"
             + factsString
-            + "Rules(" + std::to_string(rules.size()) + ")\n"
+            + "Rules(" + std::to_string(rules.size()) + "):\n"
             + rulesString
-            + "Queries(" + std::to_string(queries.size()) + ")\n"
+            + "Queries(" + std::to_string(queries.size()) + "):\n"
             + queriesString
-            + "Domain(" + std::to_string(domainSet.size()) + ")\n"
+            + "Domain(" + std::to_string(domainSet.size()) + "):\n"
             + domainString;
     return final;
 }

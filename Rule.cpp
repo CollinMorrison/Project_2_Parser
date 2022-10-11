@@ -27,3 +27,7 @@ void Rule::SetHead(Predicate headToSet) {
 void Rule::AddToBody(Predicate itemToAdd) {
     this->body.push_back(itemToAdd);
 }
+
+void Rule::ClearBody() {
+    this->body.clear();
+}

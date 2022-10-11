@@ -18,6 +18,7 @@ public:
     std::string ToString();
     void SetHead(Predicate headToSet);
     void AddToBody(Predicate itemToAdd);
+    void ClearBody();
 };
 
 
