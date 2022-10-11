@@ -25,7 +25,6 @@ DatalogProgram* Parser::ParseDatalogProgram() {
     Match(TokenType::COLON);
     ParseScheme();
     ParseSchemeList();
-    //newDatalogProgram->AddScheme();
     Match(TokenType::FACTS);
     Match(TokenType::COLON);
     ParseFactList();
@@ -127,6 +126,8 @@ void Parser::ParseRule() {
 void Parser::ParseQuery() {
     ParsePredicate();
     Match(TokenType::Q_MARK);
+    newDatalogProgram->AddQuery(this->tempScheme);
+    ClearTempParameters();
 }
 
 void Parser::ParseHeadPredicate() {
