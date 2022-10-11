@@ -18,10 +18,11 @@ private:
     std::vector<Token*> tokens;
     Token* currentToken;
     int iterator = 0;
-    Predicate* tempScheme = new Predicate();
-    Parameter* tempParameter = new Parameter;
-    std::string tempID;
-    std::vector<Parameter*> tempParameters;
+    Predicate tempScheme;
+    Parameter tempParameter;
+    Predicate tempFact;
+    //std::string tempID;
+    //std::vector<Parameter*> tempParameters;
 public:
     Parser(std::vector<Token*> inputTokens);
     void Parse();

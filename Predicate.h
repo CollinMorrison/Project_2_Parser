@@ -13,14 +13,14 @@
 class Predicate {
 private:
     std::string ID;
-    std::vector<Parameter*> parameters;
+    std::vector<Parameter> parameters;
 
 public:
     Predicate();
     std::string ToString();
-    std::vector<Parameter*> GetParameters();
+    std::vector<Parameter> GetParameters();
     void SetID(std::string newID);
-    void AddParameter(Parameter* newParameter);
+    void AddParameter(Parameter newParameter);
 };
 
 

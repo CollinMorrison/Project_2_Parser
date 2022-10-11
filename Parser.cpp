@@ -81,22 +81,32 @@ void Parser::ParseQueryList() {
 }
 
 void Parser::ParseScheme() {
-    this->tempScheme->SetID(this->currentToken->GetValue());
+    //Set temp scheme ID
+    this->tempScheme.SetID(this->currentToken->GetValue());
     Match(TokenType::ID);
     Match(TokenType::LEFT_PAREN);
-    tempParameter->SetValue(this->currentToken->GetValue());
-    this->tempScheme->AddParameter(this->tempParameter);
+    //set and push the first parameter to the temp Scheme member variable
+    this->tempParameter.SetValue(this->currentToken->GetValue());
+    this->tempScheme.AddParameter(this->tempParameter);
     Match(TokenType::ID);
     ParseIDList();
+    //Add the temp scheme to the datalog list of schemes
     this->newDatalogProgram->AddScheme(this->tempScheme);
     Match(TokenType::RIGHT_PAREN);
 }
 
 void Parser::ParseFact() {
+    //Set tempFact ID
+    this->tempFact.SetID(this->currentToken->GetValue());
     Match(TokenType::ID);
     Match(TokenType::LEFT_PAREN);
+    //Set first fact parameter
+    this->tempParameter.SetValue(this->currentToken->GetValue());
+    this->tempFact.AddParameter(this->tempParameter);
     Match(TokenType::STRING);
     ParseStringList();
+    //Add the tempFact to the list of facts
+    this->newDatalogProgram->AddFact(this->tempFact);
     Match(TokenType::RIGHT_PAREN);
     Match(TokenType::PERIOD);
 }
@@ -153,6 +163,9 @@ void Parser::ParseParameterList() {
 void Parser::ParseStringList() {
     if (this->currentToken->GetTokenType() == TokenType::COMMA) {
         Match(TokenType::COMMA);
+        //Set next fact parameter
+        this->tempParameter.SetValue(this->currentToken->GetValue());
+        this->tempFact.AddParameter(this->tempParameter);
         Match(TokenType::STRING);
         if (this->currentToken->GetTokenType() == TokenType::COMMA) {
             ParseStringList();
@@ -163,8 +176,10 @@ void Parser::ParseStringList() {
 void Parser::ParseIDList() {
     if (this->currentToken->GetTokenType() == TokenType::COMMA) {
         Match(TokenType::COMMA);
-        this->tempParameter->SetValue(this->currentToken->GetValue());
-        this->tempScheme->AddParameter(this->tempParameter);
+        //set and push the next parameter to the temporary scheme
+        this->tempParameter.SetValue(this->currentToken->GetValue());
+        this->tempScheme.AddParameter(this->tempParameter);
+        std::cout << this->tempScheme.ToString();
         Match(TokenType::ID);
         if (this->currentToken->GetTokenType() == TokenType::COMMA) {
             ParseIDList();
