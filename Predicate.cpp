@@ -23,6 +23,10 @@ std::vector<Parameter> Predicate::GetParameters() {
     return this->parameters;
 }
 
+std::string Predicate::GetID() {
+    return this->ID;
+}
+
 void Predicate::SetID(std::string newID) {
     this->ID = newID;
 }

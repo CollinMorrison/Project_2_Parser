@@ -47,6 +47,7 @@ public:
     void ParseParameter();
     void ClearTempParameters();
     void ClearTempRuleBody();
+    void ClearTempRuleHead();
 };
 
 

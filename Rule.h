@@ -19,6 +19,7 @@ public:
     void SetHead(Predicate headToSet);
     void AddToBody(Predicate itemToAdd);
     void ClearBody();
+    void ClearHeadParameters();
 };
 
 

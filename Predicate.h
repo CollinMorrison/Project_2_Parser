@@ -19,6 +19,7 @@ public:
     Predicate();
     std::string ToString();
     std::vector<Parameter> GetParameters();
+    std::string GetID();
     void SetID(std::string newID);
     void AddParameter(Parameter newParameter);
     void ClearParameters();

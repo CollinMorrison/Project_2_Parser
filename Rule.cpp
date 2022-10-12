@@ -21,7 +21,11 @@ std::string Rule::ToString() {
 }
 
 void Rule::SetHead(Predicate headToSet) {
-    this->head = headToSet;
+    this->head.SetID(headToSet.GetID());
+    for (unsigned int i = 0; i < headToSet.GetParameters().size(); ++i) {
+        this->head.AddParameter(headToSet.GetParameters().at(i));
+    }
+
 }
 
 void Rule::AddToBody(Predicate itemToAdd) {
@@ -30,4 +34,8 @@ void Rule::AddToBody(Predicate itemToAdd) {
 
 void Rule::ClearBody() {
     this->body.clear();
+}
+
+void Rule::ClearHeadParameters() {
+    this->head.ClearParameters();
 }
