@@ -14,9 +14,9 @@ Parser::Parser(std::vector<Token*> inputTokens) {
 
 void Parser::Parse() {
     try {
-        //std::cout << ParseDatalogProgram()->ToString();
+        std::cout << ParseDatalogProgram()->ToString();
         //For debugging only
-        std::string tempString = ParseDatalogProgram()->ToString();
+        //std::string tempString = ParseDatalogProgram()->ToString();
     } catch (Token* error) {
         std::cout << "Failure!" << std::endl << "  " << error->ToString() << std::endl;
     }
@@ -119,14 +119,13 @@ void Parser::ParseRule() {
     ClearTempParameters();
     Match(TokenType::COLON_DASH);
     ParsePredicate();
-    this->tempRule.AddToBody(this->tempScheme);
-    //TODO: Line 123 doesn't actually clear the entire vectors?
     ClearTempParameters();
     ParsePredicateList();
     Match(TokenType::PERIOD);
     this->newDatalogProgram->AddRule(tempRule);
     ClearTempRuleHead();
     ClearTempRuleBody();
+    ClearTempParameters();
 }
 
 void Parser::ParseQuery() {
@@ -141,6 +140,8 @@ void Parser::ParseHeadPredicate() {
     this->tempScheme.SetID(this->currentToken->GetValue());
     Match(TokenType::ID);
     Match(TokenType::LEFT_PAREN);
+    //Make sure tempScheme parameters are cleared before starting a new set of them
+    ClearTempParameters();
     //Set and push first parameter
     this->tempParameter.SetValue(this->currentToken->GetValue());
     this->tempScheme.AddParameter(this->tempParameter);
@@ -148,10 +149,9 @@ void Parser::ParseHeadPredicate() {
     ParseIDList();
     //Set tempHeadPredicate
     //this->tempHeadPredicate = this->tempScheme;
-    //TODO: Line 84 doesn't go to the SetHead function?
     this->tempRule.SetHead(tempScheme);
     //For debugging
-    std::cout << "Head: " << this->tempRule.ToString() << std::endl;
+    //std::cout << "Head: " << this->tempRule.ToString() << std::endl;
     ClearTempParameters();
     Match(TokenType::RIGHT_PAREN);
 }
@@ -164,14 +164,15 @@ void Parser::ParsePredicate() {
     ParseParameter();
     ParseParameterList();
     //debugging
-    //std::cout << "First Predicate on Left: " << this->tempScheme.ToString() << std::endl;
+    //std::cout << "Predicate on Right: " << this->tempScheme.ToString() << std::endl;
     Match(TokenType::RIGHT_PAREN);
+    this->tempRule.AddToBody(this->tempScheme);
 }
 
 void Parser::ParsePredicateList() {
     if (this->currentToken->GetTokenType() == TokenType::COMMA) {
         Match(TokenType::COMMA);
-        this->tempRule.AddToBody(this->tempScheme);
+        //this->tempRule.AddToBody(this->tempScheme);
         ClearTempParameters();
         ParsePredicate();
         if (this->currentToken->GetTokenType() == TokenType::COMMA) {
