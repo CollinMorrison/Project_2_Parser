@@ -10,14 +10,6 @@
 Token.h
 /users/guest/c/collinam/CS_236/Project_2_new/Token.h
 
-/users/guest/c/collinam/CS_236/Project_2_new/DatalogProgram.cpp
-DatalogProgram.h
-/users/guest/c/collinam/CS_236/Project_2_new/DatalogProgram.h
-iostream
--
-set
--
-
 /users/guest/c/collinam/CS_236/Project_2_new/DatalogProgram.h
 string
 -
@@ -60,12 +52,6 @@ Lexer.h
 Token.h
 /users/guest/c/collinam/CS_236/Project_2_new/Token.h
 
-/users/guest/c/collinam/CS_236/Project_2_new/Predicate.cpp
-iostream
--
-Predicate.h
-/users/guest/c/collinam/CS_236/Project_2_new/Predicate.h
-
 /users/guest/c/collinam/CS_236/Project_2_new/Predicate.h
 string
 -
@@ -76,10 +62,6 @@ Parameter.h
 Token.h
 /users/guest/c/collinam/CS_236/Project_2_new/Token.h
 
-/users/guest/c/collinam/CS_236/Project_2_new/Rule.cpp
-Rule.h
-/users/guest/c/collinam/CS_236/Project_2_new/Rule.h
-
 /users/guest/c/collinam/CS_236/Project_2_new/Rule.h
 string
 -
@@ -89,16 +71,4 @@ Predicate.h
 /users/guest/c/collinam/CS_236/Project_2_new/Token.h
 string
 -
-
-/users/guest/c/collinam/CS_236/Project_2_new/main.cpp
-Lexer.h
-/users/guest/c/collinam/CS_236/Project_2_new/Lexer.h
-iostream
--
-fstream
--
-Token.h
-/users/guest/c/collinam/CS_236/Project_2_new/Token.h
-Parser.h
-/users/guest/c/collinam/CS_236/Project_2_new/Parser.h
 

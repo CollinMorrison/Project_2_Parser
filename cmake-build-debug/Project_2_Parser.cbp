@@ -112,6 +112,12 @@
 		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/CommentAutomaton.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/Database.cpp">
+			<Option target="Project_2_Parser"/>
+		</Unit>
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/Database.h">
+			<Option target="Project_2_Parser"/>
+		</Unit>
 		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/DatalogProgram.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
@@ -128,6 +134,12 @@
 			<Option target="Project_2_Parser"/>
 		</Unit>
 		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/FactsAutomaton.h">
+			<Option target="Project_2_Parser"/>
+		</Unit>
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/Header.cpp">
+			<Option target="Project_2_Parser"/>
+		</Unit>
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/Header.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
 		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/IDAutomaton.cpp">
@@ -196,6 +208,12 @@
 		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/RParenAutomaton.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/Relation.cpp">
+			<Option target="Project_2_Parser"/>
+		</Unit>
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/Relation.h">
+			<Option target="Project_2_Parser"/>
+		</Unit>
 		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/Rule.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>
@@ -224,6 +242,12 @@
 			<Option target="Project_2_Parser"/>
 		</Unit>
 		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/Token.h">
+			<Option target="Project_2_Parser"/>
+		</Unit>
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/Tuple.cpp">
+			<Option target="Project_2_Parser"/>
+		</Unit>
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/Tuple.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
 		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/UndefinedAutomaton.cpp">
