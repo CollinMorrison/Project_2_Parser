@@ -77,3 +77,11 @@ void DatalogProgram::AddQuery(Predicate newQuery) {
 void DatalogProgram::AddRule(Rule newRule) {
     this->rules.push_back(newRule);
 }
+
+std::vector<Predicate> DatalogProgram::GetSchemes() {
+    return this->schemes;
+}
+
+std::vector<Predicate> DatalogProgram::GetFacts() {
+    return this->facts;
+}

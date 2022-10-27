@@ -13,8 +13,16 @@ class Relation {
 private:
     std::set<Tuple> tuples;
     std::string name;
-
-
+    Header header;
+public:
+    Relation(std::string newName, Header newHeader);
+    Relation Select(int index, std::string value);
+    Relation Select(int index, int nextIndex);
+    //list of indices specifies the new order fo the columns in the new relation
+    Relation Project(std::vector<int> indices);
+    Relation Rename(std::vector<std::string> newAttributes);
+    void AddTuple(Tuple newTuple);
+    std::string ToString();
 };
 
 

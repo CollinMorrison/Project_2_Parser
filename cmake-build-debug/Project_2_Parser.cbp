@@ -148,6 +148,12 @@
 		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/IDAutomaton.h">
 			<Option target="Project_2_Parser"/>
 		</Unit>
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/Interpreter.cpp">
+			<Option target="Project_2_Parser"/>
+		</Unit>
+		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/Interpreter.h">
+			<Option target="Project_2_Parser"/>
+		</Unit>
 		<Unit filename="/users/guest/c/collinam/CS_236/Project_2_new/LParenAutomaton.cpp">
 			<Option target="Project_2_Parser"/>
 		</Unit>

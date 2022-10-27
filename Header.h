@@ -11,6 +11,8 @@
 class Header {
 private:
     std::vector<std::string> attributes;
+public:
+    void AddAttribute(std::string newAttribute);
 };
 
 

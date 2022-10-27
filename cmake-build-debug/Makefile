@@ -420,6 +420,33 @@ IDAutomaton.cpp.s:
 	$(MAKE) -f CMakeFiles/Project_2_Parser.dir/build.make CMakeFiles/Project_2_Parser.dir/IDAutomaton.cpp.s
 .PHONY : IDAutomaton.cpp.s
 
+Interpreter.o: Interpreter.cpp.o
+
+.PHONY : Interpreter.o
+
+# target to build an object file
+Interpreter.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_2_Parser.dir/build.make CMakeFiles/Project_2_Parser.dir/Interpreter.cpp.o
+.PHONY : Interpreter.cpp.o
+
+Interpreter.i: Interpreter.cpp.i
+
+.PHONY : Interpreter.i
+
+# target to preprocess a source file
+Interpreter.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_2_Parser.dir/build.make CMakeFiles/Project_2_Parser.dir/Interpreter.cpp.i
+.PHONY : Interpreter.cpp.i
+
+Interpreter.s: Interpreter.cpp.s
+
+.PHONY : Interpreter.s
+
+# target to generate assembly for a file
+Interpreter.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_2_Parser.dir/build.make CMakeFiles/Project_2_Parser.dir/Interpreter.cpp.s
+.PHONY : Interpreter.cpp.s
+
 LParenAutomaton.o: LParenAutomaton.cpp.o
 
 .PHONY : LParenAutomaton.o
@@ -975,6 +1002,9 @@ help:
 	@echo "... IDAutomaton.o"
 	@echo "... IDAutomaton.i"
 	@echo "... IDAutomaton.s"
+	@echo "... Interpreter.o"
+	@echo "... Interpreter.i"
+	@echo "... Interpreter.s"
 	@echo "... LParenAutomaton.o"
 	@echo "... LParenAutomaton.i"
 	@echo "... LParenAutomaton.s"

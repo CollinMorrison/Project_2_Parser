@@ -3,3 +3,7 @@
 //
 
 #include "Header.h"
+
+void Header::AddAttribute(std::string newAttribute) {
+    this->attributes.push_back(newAttribute);
+}

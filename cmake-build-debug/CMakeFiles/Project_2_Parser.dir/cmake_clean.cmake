@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Project_2_Parser.dir/FactsAutomaton.cpp.o"
   "CMakeFiles/Project_2_Parser.dir/Header.cpp.o"
   "CMakeFiles/Project_2_Parser.dir/IDAutomaton.cpp.o"
+  "CMakeFiles/Project_2_Parser.dir/Interpreter.cpp.o"
   "CMakeFiles/Project_2_Parser.dir/LParenAutomaton.cpp.o"
   "CMakeFiles/Project_2_Parser.dir/Lexer.cpp.o"
   "CMakeFiles/Project_2_Parser.dir/MultiplyAutomaton.cpp.o"

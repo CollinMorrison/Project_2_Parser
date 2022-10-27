@@ -24,6 +24,8 @@ public:
     void AddFact(Predicate newFact);
     void AddQuery(Predicate newQuery);
     void AddRule(Rule newRule);
+    std::vector<Predicate> GetSchemes();
+    std::vector<Predicate> GetFacts();
 };
 
 

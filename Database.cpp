@@ -3,3 +3,7 @@
 //
 
 #include "Database.h"
+
+void Database::AddRelation(std::string newString, Relation newRelation) {
+    this->data.insert({newString, newRelation});
+}
