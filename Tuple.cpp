@@ -8,3 +8,7 @@
 bool Tuple::operator<(const Tuple &rhs) const {
     return this->values < rhs.values;
 }
+
+void Tuple::AddValue(std::string newValue) {
+    this->values.push_back(newValue);
+}

@@ -14,6 +14,7 @@ private:
     std::map<std::string, Relation> data;
 public:
     void AddRelation(std::string newString, Relation newRelation);
+    Relation GetRelation(std::string key);
 
 };
 

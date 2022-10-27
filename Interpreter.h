@@ -15,6 +15,9 @@ private:
     Database database;
 public:
     Interpreter(DatalogProgram newDatalog);
+    void InterpretSchemes();
+    void InterpretFacts();
+    void InterpretQueires();
 };
 
 

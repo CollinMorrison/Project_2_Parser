@@ -13,6 +13,7 @@ private:
     std::vector<std::string> values;
 public:
     bool operator< (const Tuple &rhs) const;
+    void AddValue(std::string newValue);
 };
 
 
