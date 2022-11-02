@@ -14,19 +14,32 @@ Relation::Relation(std::string newName, Header newHeader) {
     this->header = newHeader;
 }
 
-Relation Relation::Select(int index, std::string value) {
+Relation* Relation::Select(int index, std::string value) {
+    Relation* newRelation = new Relation(this->name, this->header);
+    bool containsValue = false;
+    //loop over tuples at index
+    for (Tuple t : this->tuples) {
+        //loop over the values in each tuple
+        for (unsigned int i = 0; i < t.GetValues().size(); ++i) {
+            //if the tuple contains the correct value at the correct index
+            if (t.GetValues().at(index) == value) {
+                //Add the tuple to the new relation
+                newRelation->AddTuple(t);
+            }
+        }
+    }
+    return newRelation;
+}
+
+Relation* Relation::Select(int index, int nextIndex) {
 
 }
 
-Relation Relation::Select(int index, int nextIndex) {
+Relation* Relation::Project(std::vector<int> indices) {
 
 }
 
-Relation Relation::Project(std::vector<int> indices) {
-
-}
-
-Relation Relation::Rename(std::vector<std::string> newAttributes) {
+Relation* Relation::Rename(std::vector<std::string> newAttributes) {
 
 }
 
@@ -34,7 +47,7 @@ void Relation::AddTuple(Tuple newTuple) {
     this->tuples.insert(newTuple);
 }
 
-/*std::string Relation::ToString() {
+std::string Relation::ToString() {
     std::string final;
     for (Tuple t : this->tuples) {
         final += "(";
@@ -54,4 +67,4 @@ void Relation::AddTuple(Tuple newTuple) {
         }
     }
     return final;
-}*/
+}

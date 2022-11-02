@@ -19,7 +19,7 @@ public:
     void InterpretFacts();
     void InterpretQueries();
     void EvaluateQueries();
-    Relation EvaluatePredicate(Predicate p);
+    Relation* EvaluatePredicate(const Predicate& p);
 
 };
 

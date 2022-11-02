@@ -7,9 +7,7 @@
 
 Interpreter::Interpreter(DatalogProgram newDatalog) {
     this->datalogProgram = newDatalog;
-    //std::cout << "Before InterpretSchemes" << std::endl;
     InterpretSchemes();
-    //std::cout << "After InterpretSchemes, before InterpretFacts" << std::endl;
     InterpretFacts();
 }
 
@@ -43,19 +41,48 @@ void Interpreter::InterpretFacts() {
         Relation correctRelation = this->database.GetRelation(this->datalogProgram.GetFacts().at(i).GetID());
         //Add the tuple to the relation
         correctRelation.AddTuple(*newTuple);
+        std::cout << correctRelation.ToString() << std::endl;
     }
-    std::cout << "Reached end of Interpreter constructor" << std::endl;
 }
 
 void Interpreter::EvaluateQueries() {
-    //for each query in the datalog program
+    //for each query (relation) in the datalog program
     for (unsigned int i = 0; i < this->datalogProgram.GetQueries().size(); ++i) {
+        std::string tempVariable = "";
+        int tempIndex = 0;
         //Get the relation from the database
-        Relation tempRelation = this->database.GetRelation(this->datalogProgram.GetQueries().at(i).GetID());
+        Relation currentRelation = this->database.GetRelation(this->datalogProgram.GetQueries().at(i).GetID());
+        //Select for each parameter
+        for (unsigned int j = 0; j < this->datalogProgram.GetQueries().at(i).GetParameters().size(); ++j) {
+            //EvaluatePredicate(const &this->datalogProgram.GetQueries().at(i).GetParameters().at(j))
+            std::string currentParameter = this->datalogProgram.GetQueries().at(i).GetParameters().at(j).GetValue();
+            //if the parameter is a constant
+            if (currentParameter.at(0) == '\'') {
+                currentRelation.Select(j, currentParameter);
+            }
+            //else save variable for verification later
+            else {
+                tempVariable = this->datalogProgram.GetQueries().at(i).GetParameters().at(j).GetValue();
+                tempIndex = j;
+            }
+            //Select for each pair of matching variables
+            if (currentParameter == tempVariable) {
+                currentRelation.Select(tempIndex, j);
+            }
+        }
+
+        //Project using the positions of the variables
+
+        //rename to match the names of variables
+
+        //print the resulting relation
 
     }
 }
 
-Relation Interpreter::EvaluatePredicate(Predicate p) {
+/* used to evaluate each query, and in project 4 it will be used to evaluate each
+ * predicate in the body of each rule
+ */
+Relation* Interpreter::EvaluatePredicate(const Predicate& p) {
 
 }
