@@ -7,3 +7,7 @@
 void Header::AddAttribute(std::string newAttribute) {
     this->attributes.push_back(newAttribute);
 }
+
+std::vector<std::string> Header::GetAttributes() {
+    return this->attributes;
+}

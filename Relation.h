@@ -24,6 +24,7 @@ public:
     Relation* Rename(std::vector<std::string> newAttributes);
     void AddTuple(Tuple newTuple);
     std::string ToString();
+    void ReplaceHeader(Header newHeader);
 };
 
 

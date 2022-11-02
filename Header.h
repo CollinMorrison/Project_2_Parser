@@ -13,6 +13,7 @@ private:
     std::vector<std::string> attributes;
 public:
     void AddAttribute(std::string newAttribute);
+    std::vector<std::string> GetAttributes();
 };
 
 
