@@ -4,6 +4,7 @@
 
 #include "Token.h"
 #include "Parser.h"
+#include "Interpreter.h"
 
 int main(int argc, char** argv) {
 
@@ -31,6 +32,8 @@ int main(int argc, char** argv) {
     Parser* parser = new Parser(lexer->GetTokens());
 
     parser->Parse();
+
+    Interpreter* interpreter = new Interpreter(*parser->ParseDatalogProgram());
 
 
     delete lexer;

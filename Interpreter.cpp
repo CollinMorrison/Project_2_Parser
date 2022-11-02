@@ -3,6 +3,7 @@
 //
 
 #include "Interpreter.h"
+#include <iostream>
 
 Interpreter::Interpreter(DatalogProgram newDatalog) {
     this->datalogProgram = newDatalog;
@@ -41,4 +42,18 @@ void Interpreter::InterpretFacts() {
         //Add the tuple to the relation
         correctRelation.AddTuple(*newTuple);
     }
+    std::cout << "Reached end of Interpreter constructor" << std::endl;
+}
+
+void Interpreter::EvaluateQueries() {
+    //for each query in the datalog program
+    for (unsigned int i = 0; i < this->datalogProgram.GetQueries().size(); ++i) {
+        //Get the relation from the database
+        Relation tempRelation = this->database.GetRelation(this->datalogProgram.GetQueries().at(i).GetID());
+
+    }
+}
+
+Relation Interpreter::EvaluatePredicate(Predicate p) {
+
 }

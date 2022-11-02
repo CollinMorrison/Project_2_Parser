@@ -26,6 +26,12 @@ CMakeFiles/Project_2_Parser.dir/CommentAutomaton.cpp.o
  /users/guest/c/collinam/CS_236/Project_2_new/CommentAutomaton.cpp
  /users/guest/c/collinam/CS_236/Project_2_new/CommentAutomaton.h
  /users/guest/c/collinam/CS_236/Project_2_new/Token.h
+CMakeFiles/Project_2_Parser.dir/Database.cpp.o
+ /users/guest/c/collinam/CS_236/Project_2_new/Database.cpp
+ /users/guest/c/collinam/CS_236/Project_2_new/Database.h
+ /users/guest/c/collinam/CS_236/Project_2_new/Header.h
+ /users/guest/c/collinam/CS_236/Project_2_new/Relation.h
+ /users/guest/c/collinam/CS_236/Project_2_new/Tuple.h
 CMakeFiles/Project_2_Parser.dir/DatalogProgram.cpp.o
  /users/guest/c/collinam/CS_236/Project_2_new/DatalogProgram.cpp
  /users/guest/c/collinam/CS_236/Project_2_new/DatalogProgram.h
@@ -43,11 +49,26 @@ CMakeFiles/Project_2_Parser.dir/FactsAutomaton.cpp.o
  /users/guest/c/collinam/CS_236/Project_2_new/FactsAutomaton.cpp
  /users/guest/c/collinam/CS_236/Project_2_new/FactsAutomaton.h
  /users/guest/c/collinam/CS_236/Project_2_new/Token.h
+CMakeFiles/Project_2_Parser.dir/Header.cpp.o
+ /users/guest/c/collinam/CS_236/Project_2_new/Header.cpp
+ /users/guest/c/collinam/CS_236/Project_2_new/Header.h
 CMakeFiles/Project_2_Parser.dir/IDAutomaton.cpp.o
  /users/guest/c/collinam/CS_236/Project_2_new/Automaton.h
  /users/guest/c/collinam/CS_236/Project_2_new/IDAutomaton.cpp
  /users/guest/c/collinam/CS_236/Project_2_new/IDAutomaton.h
  /users/guest/c/collinam/CS_236/Project_2_new/Token.h
+CMakeFiles/Project_2_Parser.dir/Interpreter.cpp.o
+ /users/guest/c/collinam/CS_236/Project_2_new/Database.h
+ /users/guest/c/collinam/CS_236/Project_2_new/DatalogProgram.h
+ /users/guest/c/collinam/CS_236/Project_2_new/Header.h
+ /users/guest/c/collinam/CS_236/Project_2_new/Interpreter.cpp
+ /users/guest/c/collinam/CS_236/Project_2_new/Interpreter.h
+ /users/guest/c/collinam/CS_236/Project_2_new/Parameter.h
+ /users/guest/c/collinam/CS_236/Project_2_new/Predicate.h
+ /users/guest/c/collinam/CS_236/Project_2_new/Relation.h
+ /users/guest/c/collinam/CS_236/Project_2_new/Rule.h
+ /users/guest/c/collinam/CS_236/Project_2_new/Token.h
+ /users/guest/c/collinam/CS_236/Project_2_new/Tuple.h
 CMakeFiles/Project_2_Parser.dir/LParenAutomaton.cpp.o
  /users/guest/c/collinam/CS_236/Project_2_new/Automaton.h
  /users/guest/c/collinam/CS_236/Project_2_new/LParenAutomaton.cpp
@@ -119,6 +140,16 @@ CMakeFiles/Project_2_Parser.dir/RParenAutomaton.cpp.o
  /users/guest/c/collinam/CS_236/Project_2_new/RParenAutomaton.cpp
  /users/guest/c/collinam/CS_236/Project_2_new/RParenAutomaton.h
  /users/guest/c/collinam/CS_236/Project_2_new/Token.h
+CMakeFiles/Project_2_Parser.dir/Relation.cpp.o
+ /users/guest/c/collinam/CS_236/Project_2_new/DatalogProgram.h
+ /users/guest/c/collinam/CS_236/Project_2_new/Header.h
+ /users/guest/c/collinam/CS_236/Project_2_new/Parameter.h
+ /users/guest/c/collinam/CS_236/Project_2_new/Predicate.h
+ /users/guest/c/collinam/CS_236/Project_2_new/Relation.cpp
+ /users/guest/c/collinam/CS_236/Project_2_new/Relation.h
+ /users/guest/c/collinam/CS_236/Project_2_new/Rule.h
+ /users/guest/c/collinam/CS_236/Project_2_new/Token.h
+ /users/guest/c/collinam/CS_236/Project_2_new/Tuple.h
 CMakeFiles/Project_2_Parser.dir/Rule.cpp.o
  /users/guest/c/collinam/CS_236/Project_2_new/Parameter.h
  /users/guest/c/collinam/CS_236/Project_2_new/Predicate.h
@@ -143,6 +174,9 @@ CMakeFiles/Project_2_Parser.dir/StringAutomaton.cpp.o
 CMakeFiles/Project_2_Parser.dir/Token.cpp.o
  /users/guest/c/collinam/CS_236/Project_2_new/Token.cpp
  /users/guest/c/collinam/CS_236/Project_2_new/Token.h
+CMakeFiles/Project_2_Parser.dir/Tuple.cpp.o
+ /users/guest/c/collinam/CS_236/Project_2_new/Tuple.cpp
+ /users/guest/c/collinam/CS_236/Project_2_new/Tuple.h
 CMakeFiles/Project_2_Parser.dir/UndefinedAutomaton.cpp.o
  /users/guest/c/collinam/CS_236/Project_2_new/Automaton.h
  /users/guest/c/collinam/CS_236/Project_2_new/Token.h
@@ -150,11 +184,16 @@ CMakeFiles/Project_2_Parser.dir/UndefinedAutomaton.cpp.o
  /users/guest/c/collinam/CS_236/Project_2_new/UndefinedAutomaton.h
 CMakeFiles/Project_2_Parser.dir/main.cpp.o
  /users/guest/c/collinam/CS_236/Project_2_new/Automaton.h
+ /users/guest/c/collinam/CS_236/Project_2_new/Database.h
  /users/guest/c/collinam/CS_236/Project_2_new/DatalogProgram.h
+ /users/guest/c/collinam/CS_236/Project_2_new/Header.h
+ /users/guest/c/collinam/CS_236/Project_2_new/Interpreter.h
  /users/guest/c/collinam/CS_236/Project_2_new/Lexer.h
  /users/guest/c/collinam/CS_236/Project_2_new/Parameter.h
  /users/guest/c/collinam/CS_236/Project_2_new/Parser.h
  /users/guest/c/collinam/CS_236/Project_2_new/Predicate.h
+ /users/guest/c/collinam/CS_236/Project_2_new/Relation.h
  /users/guest/c/collinam/CS_236/Project_2_new/Rule.h
  /users/guest/c/collinam/CS_236/Project_2_new/Token.h
+ /users/guest/c/collinam/CS_236/Project_2_new/Tuple.h
  /users/guest/c/collinam/CS_236/Project_2_new/main.cpp

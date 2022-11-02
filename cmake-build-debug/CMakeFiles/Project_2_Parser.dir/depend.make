@@ -26,6 +26,12 @@ CMakeFiles/Project_2_Parser.dir/CommentAutomaton.cpp.o: ../CommentAutomaton.cpp
 CMakeFiles/Project_2_Parser.dir/CommentAutomaton.cpp.o: ../CommentAutomaton.h
 CMakeFiles/Project_2_Parser.dir/CommentAutomaton.cpp.o: ../Token.h
 
+CMakeFiles/Project_2_Parser.dir/Database.cpp.o: ../Database.cpp
+CMakeFiles/Project_2_Parser.dir/Database.cpp.o: ../Database.h
+CMakeFiles/Project_2_Parser.dir/Database.cpp.o: ../Header.h
+CMakeFiles/Project_2_Parser.dir/Database.cpp.o: ../Relation.h
+CMakeFiles/Project_2_Parser.dir/Database.cpp.o: ../Tuple.h
+
 CMakeFiles/Project_2_Parser.dir/DatalogProgram.cpp.o: ../DatalogProgram.cpp
 CMakeFiles/Project_2_Parser.dir/DatalogProgram.cpp.o: ../DatalogProgram.h
 CMakeFiles/Project_2_Parser.dir/DatalogProgram.cpp.o: ../Parameter.h
@@ -43,10 +49,25 @@ CMakeFiles/Project_2_Parser.dir/FactsAutomaton.cpp.o: ../FactsAutomaton.cpp
 CMakeFiles/Project_2_Parser.dir/FactsAutomaton.cpp.o: ../FactsAutomaton.h
 CMakeFiles/Project_2_Parser.dir/FactsAutomaton.cpp.o: ../Token.h
 
+CMakeFiles/Project_2_Parser.dir/Header.cpp.o: ../Header.cpp
+CMakeFiles/Project_2_Parser.dir/Header.cpp.o: ../Header.h
+
 CMakeFiles/Project_2_Parser.dir/IDAutomaton.cpp.o: ../Automaton.h
 CMakeFiles/Project_2_Parser.dir/IDAutomaton.cpp.o: ../IDAutomaton.cpp
 CMakeFiles/Project_2_Parser.dir/IDAutomaton.cpp.o: ../IDAutomaton.h
 CMakeFiles/Project_2_Parser.dir/IDAutomaton.cpp.o: ../Token.h
+
+CMakeFiles/Project_2_Parser.dir/Interpreter.cpp.o: ../Database.h
+CMakeFiles/Project_2_Parser.dir/Interpreter.cpp.o: ../DatalogProgram.h
+CMakeFiles/Project_2_Parser.dir/Interpreter.cpp.o: ../Header.h
+CMakeFiles/Project_2_Parser.dir/Interpreter.cpp.o: ../Interpreter.cpp
+CMakeFiles/Project_2_Parser.dir/Interpreter.cpp.o: ../Interpreter.h
+CMakeFiles/Project_2_Parser.dir/Interpreter.cpp.o: ../Parameter.h
+CMakeFiles/Project_2_Parser.dir/Interpreter.cpp.o: ../Predicate.h
+CMakeFiles/Project_2_Parser.dir/Interpreter.cpp.o: ../Relation.h
+CMakeFiles/Project_2_Parser.dir/Interpreter.cpp.o: ../Rule.h
+CMakeFiles/Project_2_Parser.dir/Interpreter.cpp.o: ../Token.h
+CMakeFiles/Project_2_Parser.dir/Interpreter.cpp.o: ../Tuple.h
 
 CMakeFiles/Project_2_Parser.dir/LParenAutomaton.cpp.o: ../Automaton.h
 CMakeFiles/Project_2_Parser.dir/LParenAutomaton.cpp.o: ../LParenAutomaton.cpp
@@ -119,6 +140,16 @@ CMakeFiles/Project_2_Parser.dir/RParenAutomaton.cpp.o: ../RParenAutomaton.cpp
 CMakeFiles/Project_2_Parser.dir/RParenAutomaton.cpp.o: ../RParenAutomaton.h
 CMakeFiles/Project_2_Parser.dir/RParenAutomaton.cpp.o: ../Token.h
 
+CMakeFiles/Project_2_Parser.dir/Relation.cpp.o: ../DatalogProgram.h
+CMakeFiles/Project_2_Parser.dir/Relation.cpp.o: ../Header.h
+CMakeFiles/Project_2_Parser.dir/Relation.cpp.o: ../Parameter.h
+CMakeFiles/Project_2_Parser.dir/Relation.cpp.o: ../Predicate.h
+CMakeFiles/Project_2_Parser.dir/Relation.cpp.o: ../Relation.cpp
+CMakeFiles/Project_2_Parser.dir/Relation.cpp.o: ../Relation.h
+CMakeFiles/Project_2_Parser.dir/Relation.cpp.o: ../Rule.h
+CMakeFiles/Project_2_Parser.dir/Relation.cpp.o: ../Token.h
+CMakeFiles/Project_2_Parser.dir/Relation.cpp.o: ../Tuple.h
+
 CMakeFiles/Project_2_Parser.dir/Rule.cpp.o: ../Parameter.h
 CMakeFiles/Project_2_Parser.dir/Rule.cpp.o: ../Predicate.h
 CMakeFiles/Project_2_Parser.dir/Rule.cpp.o: ../Rule.cpp
@@ -143,18 +174,26 @@ CMakeFiles/Project_2_Parser.dir/StringAutomaton.cpp.o: ../Token.h
 CMakeFiles/Project_2_Parser.dir/Token.cpp.o: ../Token.cpp
 CMakeFiles/Project_2_Parser.dir/Token.cpp.o: ../Token.h
 
+CMakeFiles/Project_2_Parser.dir/Tuple.cpp.o: ../Tuple.cpp
+CMakeFiles/Project_2_Parser.dir/Tuple.cpp.o: ../Tuple.h
+
 CMakeFiles/Project_2_Parser.dir/UndefinedAutomaton.cpp.o: ../Automaton.h
 CMakeFiles/Project_2_Parser.dir/UndefinedAutomaton.cpp.o: ../Token.h
 CMakeFiles/Project_2_Parser.dir/UndefinedAutomaton.cpp.o: ../UndefinedAutomaton.cpp
 CMakeFiles/Project_2_Parser.dir/UndefinedAutomaton.cpp.o: ../UndefinedAutomaton.h
 
 CMakeFiles/Project_2_Parser.dir/main.cpp.o: ../Automaton.h
+CMakeFiles/Project_2_Parser.dir/main.cpp.o: ../Database.h
 CMakeFiles/Project_2_Parser.dir/main.cpp.o: ../DatalogProgram.h
+CMakeFiles/Project_2_Parser.dir/main.cpp.o: ../Header.h
+CMakeFiles/Project_2_Parser.dir/main.cpp.o: ../Interpreter.h
 CMakeFiles/Project_2_Parser.dir/main.cpp.o: ../Lexer.h
 CMakeFiles/Project_2_Parser.dir/main.cpp.o: ../Parameter.h
 CMakeFiles/Project_2_Parser.dir/main.cpp.o: ../Parser.h
 CMakeFiles/Project_2_Parser.dir/main.cpp.o: ../Predicate.h
+CMakeFiles/Project_2_Parser.dir/main.cpp.o: ../Relation.h
 CMakeFiles/Project_2_Parser.dir/main.cpp.o: ../Rule.h
 CMakeFiles/Project_2_Parser.dir/main.cpp.o: ../Token.h
+CMakeFiles/Project_2_Parser.dir/main.cpp.o: ../Tuple.h
 CMakeFiles/Project_2_Parser.dir/main.cpp.o: ../main.cpp
 

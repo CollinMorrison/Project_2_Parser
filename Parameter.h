@@ -11,10 +11,12 @@
 class Parameter {
 private:
     std::string value;
+    bool isConstant;
 public:
     explicit Parameter();
     std::string GetValue();
     void SetValue(std::string newValue);
+    bool IsConstant();
 };
 
 

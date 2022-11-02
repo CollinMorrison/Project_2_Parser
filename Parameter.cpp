@@ -14,3 +14,7 @@ std::string Parameter::GetValue() {
 void Parameter::SetValue(std::string newValue) {
     this->value = newValue;
 }
+
+bool Parameter::IsConstant() {
+    return this->isConstant;
+}

@@ -14,9 +14,9 @@ Parser::Parser(std::vector<Token*> inputTokens) {
 
 void Parser::Parse() {
     try {
-        std::cout << ParseDatalogProgram()->ToString();
+        //std::cout << ParseDatalogProgram()->ToString();
         //For debugging only
-        //std::string tempString = ParseDatalogProgram()->ToString();
+        std::string tempString = ParseDatalogProgram()->ToString();
     } catch (Token* error) {
         std::cout << "Failure!" << std::endl << "  " << error->ToString() << std::endl;
     }

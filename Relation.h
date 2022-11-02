@@ -22,7 +22,7 @@ public:
     Relation Project(std::vector<int> indices);
     Relation Rename(std::vector<std::string> newAttributes);
     void AddTuple(Tuple newTuple);
-    std::string ToString();
+    //std::string ToString();
 };
 
 

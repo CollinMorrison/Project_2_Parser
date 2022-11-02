@@ -6,9 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/users/guest/c/collinam/CS_236/Project_2_new/Automaton.h
-Token.h
-/users/guest/c/collinam/CS_236/Project_2_new/Token.h
+/users/guest/c/collinam/CS_236/Project_2_new/Database.h
+Relation.h
+/users/guest/c/collinam/CS_236/Project_2_new/Relation.h
+map
+-
+string
+-
 
 /users/guest/c/collinam/CS_236/Project_2_new/DatalogProgram.h
 string
@@ -20,37 +24,27 @@ Predicate.h
 Rule.h
 /users/guest/c/collinam/CS_236/Project_2_new/Rule.h
 
-/users/guest/c/collinam/CS_236/Project_2_new/Lexer.h
+/users/guest/c/collinam/CS_236/Project_2_new/Header.h
 vector
 -
-Automaton.h
-/users/guest/c/collinam/CS_236/Project_2_new/Automaton.h
-Token.h
-/users/guest/c/collinam/CS_236/Project_2_new/Token.h
-
-/users/guest/c/collinam/CS_236/Project_2_new/Parameter.h
 string
 -
 
-/users/guest/c/collinam/CS_236/Project_2_new/Parser.cpp
-Parser.h
-/users/guest/c/collinam/CS_236/Project_2_new/Parser.h
+/users/guest/c/collinam/CS_236/Project_2_new/Interpreter.cpp
+Interpreter.h
+/users/guest/c/collinam/CS_236/Project_2_new/Interpreter.h
 iostream
 -
 
-/users/guest/c/collinam/CS_236/Project_2_new/Parser.h
-Predicate.h
-/users/guest/c/collinam/CS_236/Project_2_new/Predicate.h
-Parameter.h
-/users/guest/c/collinam/CS_236/Project_2_new/Parameter.h
-Rule.h
-/users/guest/c/collinam/CS_236/Project_2_new/Rule.h
+/users/guest/c/collinam/CS_236/Project_2_new/Interpreter.h
 DatalogProgram.h
 /users/guest/c/collinam/CS_236/Project_2_new/DatalogProgram.h
-Lexer.h
-/users/guest/c/collinam/CS_236/Project_2_new/Lexer.h
-Token.h
-/users/guest/c/collinam/CS_236/Project_2_new/Token.h
+Database.h
+/users/guest/c/collinam/CS_236/Project_2_new/Database.h
+
+/users/guest/c/collinam/CS_236/Project_2_new/Parameter.h
+string
+-
 
 /users/guest/c/collinam/CS_236/Project_2_new/Predicate.h
 string
@@ -62,6 +56,14 @@ Parameter.h
 Token.h
 /users/guest/c/collinam/CS_236/Project_2_new/Token.h
 
+/users/guest/c/collinam/CS_236/Project_2_new/Relation.h
+Tuple.h
+/users/guest/c/collinam/CS_236/Project_2_new/Tuple.h
+Header.h
+/users/guest/c/collinam/CS_236/Project_2_new/Header.h
+set
+-
+
 /users/guest/c/collinam/CS_236/Project_2_new/Rule.h
 string
 -
@@ -69,6 +71,12 @@ Predicate.h
 /users/guest/c/collinam/CS_236/Project_2_new/Predicate.h
 
 /users/guest/c/collinam/CS_236/Project_2_new/Token.h
+string
+-
+
+/users/guest/c/collinam/CS_236/Project_2_new/Tuple.h
+vector
+-
 string
 -
 

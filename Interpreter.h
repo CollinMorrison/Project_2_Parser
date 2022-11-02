@@ -17,7 +17,10 @@ public:
     Interpreter(DatalogProgram newDatalog);
     void InterpretSchemes();
     void InterpretFacts();
-    void InterpretQueires();
+    void InterpretQueries();
+    void EvaluateQueries();
+    Relation EvaluatePredicate(Predicate p);
+
 };
 
 
