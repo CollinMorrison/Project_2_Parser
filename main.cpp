@@ -31,10 +31,9 @@ int main(int argc, char** argv) {
 
     Parser* parser = new Parser(lexer->GetTokens());
 
-    parser->Parse();
+    //parser->Parse();
 
     Interpreter* interpreter = new Interpreter(*parser->ParseDatalogProgram());
-
 
     delete lexer;
 

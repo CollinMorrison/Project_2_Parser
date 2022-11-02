@@ -7,7 +7,9 @@
 
 Interpreter::Interpreter(DatalogProgram newDatalog) {
     this->datalogProgram = newDatalog;
+    //std::cout << "Before InterpretSchemes" << std::endl;
     InterpretSchemes();
+    //std::cout << "After InterpretSchemes, before InterpretFacts" << std::endl;
     InterpretFacts();
 }
 

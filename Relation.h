@@ -15,6 +15,7 @@ private:
     std::string name;
     Header header;
 public:
+    Relation();
     Relation(std::string newName, Header newHeader);
     Relation Select(int index, std::string value);
     Relation Select(int index, int nextIndex);

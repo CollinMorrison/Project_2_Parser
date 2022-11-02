@@ -23,6 +23,7 @@ void Parser::Parse() {
 }
 
 DatalogProgram* Parser::ParseDatalogProgram() {
+    try {
     Match(TokenType::SCHEMES);
     Match(TokenType::COLON);
     ParseScheme();
@@ -38,8 +39,11 @@ DatalogProgram* Parser::ParseDatalogProgram() {
     ParseQuery();
     ParseQueryList();
     Match(TokenType::EOF_TYPE);
-    std::cout << "Success!" << std::endl;
+    //std::cout << "Success!" << std::endl;
     return newDatalogProgram;
+    } catch (Token* error) {
+        std::cout << "Failure!" << std::endl << "  " << error->ToString() << std::endl;
+    }
 }
 
 void Parser::ParseSchemeList() {

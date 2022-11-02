@@ -5,6 +5,10 @@
 #include "Relation.h"
 #include "DatalogProgram.h"
 
+Relation::Relation() {
+
+}
+
 Relation::Relation(std::string newName, Header newHeader) {
     this->name = newName;
     this->header = newHeader;
