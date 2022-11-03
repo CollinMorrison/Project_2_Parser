@@ -92,6 +92,7 @@ void Interpreter::EvaluateQueries() {
                     + ")\n";
 
         }
+        std::cout << finalString;
     }
 }
 
