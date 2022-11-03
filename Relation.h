@@ -25,6 +25,7 @@ public:
     void AddTuple(Tuple newTuple);
     std::string ToString();
     void ReplaceHeader(Header newHeader);
+    std::set<Tuple> GetTuples();
 };
 
 

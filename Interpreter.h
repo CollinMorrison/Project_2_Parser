@@ -20,6 +20,7 @@ public:
     void InterpretQueries();
     void EvaluateQueries();
     Relation* EvaluatePredicate(const Predicate& p);
+    void Print();
 
 };
 

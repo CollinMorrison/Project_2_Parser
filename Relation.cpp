@@ -95,7 +95,7 @@ std::string Relation::ToString() {
         final += "(";
         //TODO: complete for loop
         for (std::string value : t.GetValues()) {
-            final += "'" + value + "'";
+            final += value;
             //If we are not at the last value, add a comma
             if (value != t.GetValues().back()) {
                 final += ",";
@@ -113,4 +113,8 @@ std::string Relation::ToString() {
 
 void Relation::ReplaceHeader(Header newHeader) {
     this->header = newHeader;
+}
+
+std::set<Tuple> Relation::GetTuples() {
+    return this->tuples;
 }
