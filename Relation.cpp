@@ -4,6 +4,7 @@
 
 #include "Relation.h"
 #include "DatalogProgram.h"
+#include <iostream>
 
 Relation::Relation() {
 
@@ -30,6 +31,7 @@ Relation* Relation::Select(int index, std::string value) {
             }
         }
     }
+    //std::cout << "New Relation from Select1: " << newRelation->ToString() << std::endl;
     return newRelation;
 }
 
@@ -45,6 +47,7 @@ Relation* Relation::Select(int index, int nextIndex) {
             newRelation->AddTuple(t);
         }
     }
+    //std::cout << "New Relation from select2: " << newRelation->ToString() << std::endl;
     return newRelation;
 }
 
@@ -52,6 +55,7 @@ Relation* Relation::Select(int index, int nextIndex) {
  * returns a relation with the specified indices (columns) selected
  */
 Relation* Relation::Project(std::vector<int> indices) {
+    //std::cout << "In Project" << std::endl;
     Relation* newRelation = new Relation(this->name, this->header);
     //loop over tuples
     for (Tuple t : this->tuples) {
@@ -59,6 +63,7 @@ Relation* Relation::Project(std::vector<int> indices) {
         Header newHeader;
         //loop over the indices requested
         for (unsigned int i = 0; i < indices.size(); ++i) {
+            //std::cout << "Current Index: " << indices.at(i) << std::endl;
             //Add correct value from old header to new header
             newHeader.AddAttribute(this->header.GetAttributes().at(indices.at(i)));
             //Add the value at the index
@@ -69,6 +74,7 @@ Relation* Relation::Project(std::vector<int> indices) {
         //Add the newly constructed Tuple to the new relation
         newRelation->AddTuple(newTuple);
     }
+    //std::cout << "New Relation from project: " << newRelation->ToString() << std::endl;
     return newRelation;
 }
 
@@ -82,10 +88,20 @@ Relation* Relation::Rename(std::vector<std::string> newAttributes) {
     }
     //replace the old header with the new header
     newRelation->ReplaceHeader(newHeader);
+    //fill in the tuples
+    for (Tuple t : this->tuples) {
+        Tuple newTuple;
+        //loop over values in each tuple
+        for (unsigned int i = 0; i < t.GetValues().size(); ++i) {
+            newTuple.AddValue(t.GetValues().at(i));
+        }
+        newRelation->AddTuple(newTuple);
+    }
     return newRelation;
 }
 
 void Relation::AddTuple(Tuple newTuple) {
+    //std::cout << "First value of tuple to add: " << newTuple.GetValues().at(0) << std::endl;
     this->tuples.insert(newTuple);
 }
 

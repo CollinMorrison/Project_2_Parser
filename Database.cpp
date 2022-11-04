@@ -8,6 +8,6 @@ void Database::AddRelation(std::string newString, Relation newRelation) {
     this->data.insert({newString, newRelation});
 }
 
-Relation Database::GetRelation(std::string key) {
-    return this->data[key];
+Relation* Database::GetRelation(std::string key) {
+    return &this->data[key];
 }
