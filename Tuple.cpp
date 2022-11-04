@@ -11,3 +11,7 @@ void Tuple::AddValue(std::string newValue) {
 std::vector<std::string> Tuple::GetValues () {
     return this->values;
 }
+
+void Tuple::ClearValues() {
+    this->values.clear();
+}

@@ -106,8 +106,9 @@ void Relation::AddTuple(Tuple newTuple) {
 }
 
 std::string Relation::ToString() {
-    std::string final = "  ";
+    std::string final;
     for (Tuple t : this->tuples) {
+        final += "  ";
         for (unsigned int i = 0; i < this->header.GetAttributes().size(); ++i) {
             final += this->header.GetAttributes().at(i)
                     + "="

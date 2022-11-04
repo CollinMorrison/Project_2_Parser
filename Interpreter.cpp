@@ -39,7 +39,7 @@ void Interpreter::InterpretFacts() {
         //loop over each parameter within the fact
         for (unsigned int j = 0; j < this->datalogProgram.GetFacts().at(i).GetParameters().size(); ++j) {
             //Add the individual parameter to the list of attributes within the tuple
-            newTuple->AddValue(this->datalogProgram.GetFacts().at(i).GetParameters().at(i).GetValue());
+            newTuple->AddValue(this->datalogProgram.GetFacts().at(i).GetParameters().at(j).GetValue());
         }
 
         /*for (unsigned int j = 0; j < newTuple->GetValues().size(); ++j) {
@@ -49,6 +49,9 @@ void Interpreter::InterpretFacts() {
         Relation* correctRelation = this->database.GetRelation(this->datalogProgram.GetFacts().at(i).GetID());
         //Add the tuple to the relation in the database
         correctRelation->AddTuple(*newTuple);
+        //clear newTuple
+        newTuple->ClearValues();
+        //std::cout << "Current Relation after Interpreting facts: " << correctRelation->ToString() << std::endl;
     }
 }
 
@@ -61,7 +64,7 @@ void Interpreter::EvaluateQueries() {
             std::cout << this->datalogProgram.GetQueries().at(j).ToString() << std::endl;
         }*/
         //std::cout << "Current Query: " << this->datalogProgram.GetQueries().at(i).ToString() << std::endl;
-        std::string tempVariable = "";
+        std::string tempVariable;
         std::vector<int> indices;
         std::vector<std::string> attributes;
         int tempIndex = 0;
@@ -75,16 +78,18 @@ void Interpreter::EvaluateQueries() {
         //Select for each parameter
         for (unsigned int j = 0; j < this->datalogProgram.GetQueries().at(i).GetParameters().size(); ++j) {
             std::string currentParameter = this->datalogProgram.GetQueries().at(i).GetParameters().at(j).GetValue();
-           // std::cout << "Current Parameter: " << currentParameter << std::endl;
+            //std::cout << "Current Parameter: " << currentParameter << std::endl;
             //if the parameter is a constant
             if (currentParameter.at(0) == '\'') {
-               // std::cout << "Parameter is a constant" << std::endl;
+                //std::cout << "Parameter is a constant" << std::endl;
                 currentRelation = currentRelation->Select(j, currentParameter);
+                //std::cout << "Current Relation after Select1: " << currentRelation->ToString() << std::endl;
             }
             //Select for each pair of matching variables
             else if (currentParameter == tempVariable) {
                 //std::cout << "Matching pair of variables" << std::endl;
                 currentRelation = currentRelation->Select(tempIndex, j);
+               // std::cout << "Current Relation after Select2: " << currentRelation->ToString() << std::endl;
             }
             //else save variable for verification later
             else {
