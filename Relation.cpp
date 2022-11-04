@@ -106,22 +106,18 @@ void Relation::AddTuple(Tuple newTuple) {
 }
 
 std::string Relation::ToString() {
-    std::string final;
+    std::string final = "  ";
     for (Tuple t : this->tuples) {
-        final += "(";
-        //TODO: complete for loop
-        for (std::string value : t.GetValues()) {
-            final += value;
-            //If we are not at the last value, add a comma
-            if (value != t.GetValues().back()) {
-                final += ",";
+        for (unsigned int i = 0; i < this->header.GetAttributes().size(); ++i) {
+            final += this->header.GetAttributes().at(i)
+                    + "="
+                    + t.GetValues().at(i);
+            if (i != this->header.GetAttributes().size()-1) {
+                final += ", ";
             }
-        }
-        final += ")";
-        //If we are not at the last tuple, add a comma
-        Tuple lastTuple = *this->tuples.rbegin();
-        if (t.GetValues() != lastTuple.GetValues()) {
-            final += ",";
+            else {
+                final += "\n";
+            }
         }
     }
     return final;

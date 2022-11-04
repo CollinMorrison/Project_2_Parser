@@ -40,10 +40,10 @@ DatalogProgram* Parser::ParseDatalogProgram() {
     ParseQueryList();
     Match(TokenType::EOF_TYPE);
     //std::cout << "Success!" << std::endl;
-    return newDatalogProgram;
     } catch (Token* error) {
         std::cout << "Failure!" << std::endl << "  " << error->ToString() << std::endl;
     }
+    return newDatalogProgram;
 }
 
 void Parser::ParseSchemeList() {

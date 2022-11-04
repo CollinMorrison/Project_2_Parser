@@ -118,7 +118,7 @@ void Interpreter::EvaluateQueries() {
             finalString += "Yes("
                     + std::to_string(currentRelation->GetTuples().size())
                     + ")\n";
-
+            finalString += currentRelation->ToString();
         }
     }
     std::cout << finalString;
@@ -127,9 +127,9 @@ void Interpreter::EvaluateQueries() {
 /* used to evaluate each query, and in project 4 it will be used to evaluate each
  * predicate in the body of each rule
  */
-Relation* Interpreter::EvaluatePredicate(const Predicate& p) {
+/*Relation* Interpreter::EvaluatePredicate(const Predicate& p) {
 
-}
+}*/
 
 void Interpreter::Print() {
 
