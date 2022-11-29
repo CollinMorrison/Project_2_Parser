@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/users/guest/c/collinam/CS_236/Project_2_new/Automaton.h
+Token.h
+/users/guest/c/collinam/CS_236/Project_2_new/Token.h
+
+/users/guest/c/collinam/CS_236/Project_2_new/Database.cpp
+Database.h
+/users/guest/c/collinam/CS_236/Project_2_new/Database.h
+
 /users/guest/c/collinam/CS_236/Project_2_new/Database.h
 Relation.h
 /users/guest/c/collinam/CS_236/Project_2_new/Relation.h
@@ -42,9 +50,31 @@ DatalogProgram.h
 Database.h
 /users/guest/c/collinam/CS_236/Project_2_new/Database.h
 
+/users/guest/c/collinam/CS_236/Project_2_new/Lexer.h
+vector
+-
+Automaton.h
+/users/guest/c/collinam/CS_236/Project_2_new/Automaton.h
+Token.h
+/users/guest/c/collinam/CS_236/Project_2_new/Token.h
+
 /users/guest/c/collinam/CS_236/Project_2_new/Parameter.h
 string
 -
+
+/users/guest/c/collinam/CS_236/Project_2_new/Parser.h
+Predicate.h
+/users/guest/c/collinam/CS_236/Project_2_new/Predicate.h
+Parameter.h
+/users/guest/c/collinam/CS_236/Project_2_new/Parameter.h
+Rule.h
+/users/guest/c/collinam/CS_236/Project_2_new/Rule.h
+DatalogProgram.h
+/users/guest/c/collinam/CS_236/Project_2_new/DatalogProgram.h
+Lexer.h
+/users/guest/c/collinam/CS_236/Project_2_new/Lexer.h
+Token.h
+/users/guest/c/collinam/CS_236/Project_2_new/Token.h
 
 /users/guest/c/collinam/CS_236/Project_2_new/Predicate.h
 string
@@ -55,6 +85,14 @@ Parameter.h
 /users/guest/c/collinam/CS_236/Project_2_new/Parameter.h
 Token.h
 /users/guest/c/collinam/CS_236/Project_2_new/Token.h
+
+/users/guest/c/collinam/CS_236/Project_2_new/Relation.cpp
+Relation.h
+/users/guest/c/collinam/CS_236/Project_2_new/Relation.h
+DatalogProgram.h
+/users/guest/c/collinam/CS_236/Project_2_new/DatalogProgram.h
+iostream
+-
 
 /users/guest/c/collinam/CS_236/Project_2_new/Relation.h
 Tuple.h
@@ -79,4 +117,18 @@ vector
 -
 string
 -
+
+/users/guest/c/collinam/CS_236/Project_2_new/main.cpp
+Lexer.h
+/users/guest/c/collinam/CS_236/Project_2_new/Lexer.h
+iostream
+-
+fstream
+-
+Token.h
+/users/guest/c/collinam/CS_236/Project_2_new/Token.h
+Parser.h
+/users/guest/c/collinam/CS_236/Project_2_new/Parser.h
+Interpreter.h
+/users/guest/c/collinam/CS_236/Project_2_new/Interpreter.h
 
