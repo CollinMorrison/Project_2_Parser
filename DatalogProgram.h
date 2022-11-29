@@ -27,6 +27,7 @@ public:
     std::vector<Predicate> GetSchemes();
     std::vector<Predicate> GetFacts();
     std::vector<Predicate> GetQueries();
+    std::vector<Rule> GetRules();
 };
 
 

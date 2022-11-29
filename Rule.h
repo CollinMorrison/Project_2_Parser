@@ -20,6 +20,8 @@ public:
     void AddToBody(Predicate itemToAdd);
     void ClearBody();
     void ClearHeadParameters();
+    std::vector<Predicate> GetBody();
+    Predicate GetHead();
 };
 
 

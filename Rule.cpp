@@ -39,3 +39,11 @@ void Rule::ClearBody() {
 void Rule::ClearHeadParameters() {
     this->head.ClearParameters();
 }
+
+std::vector<Predicate> Rule::GetBody() {
+    return this->body;
+}
+
+Predicate Rule::GetHead() {
+    return this->head;
+}
