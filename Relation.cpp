@@ -206,3 +206,7 @@ Tuple Relation::JoinTuples(Tuple& t1, Tuple& t2) {
     }
     return newTuple;
 }
+
+void Relation::ReplaceName(std::string newName) {
+    this->name = newName;
+}

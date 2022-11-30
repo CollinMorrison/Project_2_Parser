@@ -14,6 +14,8 @@ private:
 public:
     void AddAttribute(std::string newAttribute);
     std::vector<std::string> GetAttributes();
+    std::string ToString();
+    void ReplaceAttributes(std::vector<std::string> newAttributes);
 };
 
 

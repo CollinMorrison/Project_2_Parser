@@ -145,8 +145,16 @@ void Interpreter::EvaluateRules() {
             }
         }
         //Project the columns that appear in the head predicate
-        tempRelation->Project(indices);
-        //Rename the relation to make it union-compatible
+        tempRelation = tempRelation->Project(indices);
+        //std::cout << "tempRelation after Projection: " << std::endl << "Header: " << tempRelation->GetHeader().ToString() << std::endl << "Tuples: " << tempRelation->ToString() << std::endl;
+
+        //Rename the relation itself and the header attributes to make it union-compatible
+        tempRelation->ReplaceName(currentHead.GetID());
+        std::vector<std::string> newAttributes;
+        for (unsigned int j = 0; j < currentHead.GetParameters().size(); ++j) {
+            newAttributes.push_back(currentHead.GetParameters().at(j).GetValue());
+        }
+        tempRelation->GetHeader().ReplaceAttributes(newAttributes);
         //Union with the relation in the database
 
         relations.clear();

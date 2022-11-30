@@ -34,6 +34,7 @@ public:
     bool IsJoinable(Tuple& t1, Tuple& t2);
     void ClearIndicesToMatch();
     Tuple JoinTuples(Tuple& t1, Tuple& t2);
+    void ReplaceName(std::string newName);
 };
 
 
