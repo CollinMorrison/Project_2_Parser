@@ -34,6 +34,7 @@ int main(int argc, char** argv) {
     //parser->Parse();
 
     Interpreter* interpreter = new Interpreter(*parser->ParseDatalogProgram());
+    interpreter->EvaluateRules();
     interpreter->EvaluateQueries();
 
     delete lexer;
