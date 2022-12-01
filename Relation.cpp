@@ -210,3 +210,24 @@ Tuple Relation::JoinTuples(Tuple& t1, Tuple& t2) {
 void Relation::ReplaceName(std::string newName) {
     this->name = newName;
 }
+
+Relation* Relation::Union(Relation* relationToUnion) {
+    for (Tuple t : relationToUnion->GetTuples()) {
+        if (this->tuples.insert(t).second) {
+            for (unsigned int i = 0; i < this->header.GetAttributes().size(); ++i) {
+                //std::cout << "Header size: " << this->header.GetAttributes().size() << std::endl;
+                //std::cout << "Tuple size: " << t.GetValues().size() << std::endl;
+                std::cout
+                    << this->header.GetAttributes().at(i)
+                    << "="
+                    << t.GetValues().at(i);
+                if (i != this->header.GetAttributes().size()-1) {
+                    std::cout << ", ";
+                }
+                else {
+                    std::cout << std::endl;
+                }
+            }
+        }
+    }
+}

@@ -118,47 +118,58 @@ Relation* Interpreter::EvaluatePredicate(Predicate& p) {
 void Interpreter::EvaluateRules() {
     std::vector<Relation*> relations;
     std::vector<int> indices;
-    //for each rule in the datalog program
-    for (unsigned int i = 0; i < this->datalogProgram.GetRules().size(); ++i) {
-        Rule currentRule = this->datalogProgram.GetRules().at(i);
-        std::cout << "Current Rule: " << currentRule.ToString() << std::endl;
-        Predicate currentHead = currentRule.GetHead();
-        //Evaluate the predicates in the body (right side),
-        for (unsigned int j = 0; j < currentRule.GetBody().size(); ++j) {
-            relations.push_back(EvaluatePredicate(currentRule.GetBody().at(j)));
-            std::cout << "Current Relation in body: " << relations.at(j)->ToString() << std::endl;
-        }
-        //Save the first relation
-        Relation* tempRelation = relations.at(0);
-        //Join the resulting relations
-        if (relations.size() > 1) {
-            for (unsigned int j = 1; j < relations.size() - 1; ++j) {
-                tempRelation = tempRelation->Join(relations.at(i));
+    int initialNumOfTuples = this->database.GetNumTuples();
+    int finalNumOfTuples = 0;
+    while (initialNumOfTuples - finalNumOfTuples != 0) {
+        initialNumOfTuples = this->database.GetNumTuples();
+        //for each rule in the datalog program
+        for (unsigned int i = 0; i < this->datalogProgram.GetRules().size(); ++i) {
+            Rule currentRule = this->datalogProgram.GetRules().at(i);
+            std::cout << "Current Rule: " << currentRule.ToString() << std::endl;
+            Predicate currentHead = currentRule.GetHead();
+            //Evaluate the predicates in the body (right side),
+            for (unsigned int j = 0; j < currentRule.GetBody().size(); ++j) {
+                relations.push_back(EvaluatePredicate(currentRule.GetBody().at(j)));
+                //std::cout << "Current Relation in body: " << relations.at(j)->ToString() << std::endl;
             }
-        }
-        //Compile a list of the indices of the attributes in the tempRelation parameters that match the Rule head
-        for (unsigned int j = 0; j < currentHead.GetParameters().size(); ++j) {
-            for (unsigned int k = 0; k < tempRelation->GetHeader().GetAttributes().size(); ++k) {
-                if (currentHead.GetParameters().at(j).GetValue() == tempRelation->GetHeader().GetAttributes().at(k)) {
-                    indices.push_back(k);
+            //Save the first relation
+            Relation *tempRelation = relations.at(0);
+            //Join the resulting relations
+            //if (relations.size() > 1) {
+            for (unsigned int j = 0; j < relations.size() - 1; ++j) {
+                tempRelation = tempRelation->Join(relations.at(i + 1));
+                //std::cout << "Relation after joining: " << tempRelation->ToString() << std::endl;
+            }
+            //}
+            //Compile a list of the indices of the attributes in the tempRelation parameters that match the Rule head
+            for (unsigned int j = 0; j < currentHead.GetParameters().size(); ++j) {
+                for (unsigned int k = 0; k < tempRelation->GetHeader().GetAttributes().size(); ++k) {
+                    if (currentHead.GetParameters().at(j).GetValue() ==
+                        tempRelation->GetHeader().GetAttributes().at(k)) {
+                        indices.push_back(k);
+                    }
                 }
             }
-        }
-        //Project the columns that appear in the head predicate
-        tempRelation = tempRelation->Project(indices);
-        //std::cout << "tempRelation after Projection: " << std::endl << "Header: " << tempRelation->GetHeader().ToString() << std::endl << "Tuples: " << tempRelation->ToString() << std::endl;
+            //Project the columns that appear in the head predicate
+            tempRelation = tempRelation->Project(indices);
+            //std::cout << "tempRelation after Projection: " << std::endl << "Header: " << tempRelation->GetHeader().ToString() << std::endl << "Tuples: " << tempRelation->ToString() << std::endl;
 
-        //Rename the relation itself and the header attributes to make it union-compatible
-        tempRelation->ReplaceName(currentHead.GetID());
-        std::vector<std::string> newAttributes;
-        for (unsigned int j = 0; j < currentHead.GetParameters().size(); ++j) {
-            newAttributes.push_back(currentHead.GetParameters().at(j).GetValue());
-        }
-        tempRelation->GetHeader().ReplaceAttributes(newAttributes);
-        //Union with the relation in the database
+            //Rename the relation itself and the header attributes to make it union-compatible
+            tempRelation->ReplaceName(currentHead.GetID());
+            std::vector<std::string> newAttributes;
+            for (unsigned int j = 0; j < currentHead.GetParameters().size(); ++j) {
+                newAttributes.push_back(currentHead.GetParameters().at(j).GetValue());
+            }
+            tempRelation->GetHeader().ReplaceAttributes(newAttributes);
+            //Union with the relation in the database
+            Relation *unionRelation = this->database.GetRelation(currentHead.GetID());
+            //std::cout << "Relation to be unioned with tempRelation: " << unionRelation->ToString() << std::endl;
+            unionRelation->Union(tempRelation);
 
-        relations.clear();
-        indices.clear();
+            finalNumOfTuples = this->database.GetNumTuples();
+            relations.clear();
+            indices.clear();
+        }
     }
 }
 

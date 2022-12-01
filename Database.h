@@ -15,7 +15,7 @@ private:
 public:
     void AddRelation(std::string newString, Relation newRelation);
     Relation* GetRelation(std::string key);
-
+    int GetNumTuples();
 };
 
 

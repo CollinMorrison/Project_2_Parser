@@ -35,6 +35,7 @@ public:
     void ClearIndicesToMatch();
     Tuple JoinTuples(Tuple& t1, Tuple& t2);
     void ReplaceName(std::string newName);
+    Relation* Union(Relation* relationToUnion);
 };
 
 

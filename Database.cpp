@@ -11,3 +11,14 @@ void Database::AddRelation(std::string newString, Relation newRelation) {
 Relation* Database::GetRelation(std::string key) {
     return &this->data[key];
 }
+
+int Database::GetNumTuples() {
+    int numTuples;
+    auto iter = this->data.begin();
+    while (iter != this->data.end()) {
+        for (Tuple t : iter->second.GetTuples()) {
+            ++numTuples;
+        }
+    }
+    return numTuples;
+}
