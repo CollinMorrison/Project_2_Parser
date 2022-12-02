@@ -53,16 +53,21 @@ Relation* Relation::Select(int index, int nextIndex) {
  * returns a relation with the specified indices (columns) selected
  */
 Relation* Relation::Project(std::vector<int> indices) {
+    //std::cout << "In Project" << std::endl;
     Relation* newRelation = new Relation(this->name, this->header);
     //loop over tuples
     for (Tuple t : this->tuples) {
         Tuple newTuple;
         Header newHeader;
         //loop over the indices requested
+        //std::cout << "tempRelation Header within project: " << this->header.ToString() << std::endl;
         for (unsigned int i = 0; i < indices.size(); ++i) {
+            //std::cout << "Index: " << indices.at(i) << std::endl;
             //Add correct value from old header to new header
             newHeader.AddAttribute(this->header.GetAttributes().at(indices.at(i)));
+            //std::cout << "New Header: " << newHeader.ToString() << std::endl;
             //Add the value at the index
+            //std::cout << "Current Tuple: " << t.ToString() << std::endl;
             newTuple.AddValue(t.GetValues().at(indices.at(i)));
         }
         //replace the header with the new header
@@ -99,14 +104,18 @@ Relation* Relation::Rename(std::vector<std::string> newAttributes) {
 Relation* Relation::Join(Relation* otherRelation) {
     //combine headers into a new header
     Header newHeader = this->CombineHeaders(this->header, otherRelation->GetHeader());
+    //std::cout << "newHeader: " << newHeader.ToString() << std::endl;
     //make a new relation using the expanded header
     Relation* newRelation = new Relation(this->name, newHeader);
     //for each tuple in each relation
     for (Tuple t1 : this->tuples) {
         for (Tuple t2 : otherRelation->GetTuples()) {
             if (IsJoinable(t1,t2)) {
+                //std::cout << "First tuple: " << t1.ToString() << std::endl;
+                //std::cout << "Second tuple: " << t2.ToString() << std::endl;
                 //join the tuples and add them to the new Relation
                 newRelation->AddTuple(JoinTuples(t1,t2));
+                //std::cout << "New Tuple: " << JoinTuples(t1, t2).ToString() << std::endl;
             }
         }
     }
@@ -122,7 +131,9 @@ void Relation::AddTuple(Tuple newTuple) {
 std::string Relation::ToString() {
     std::string final;
     for (Tuple t : this->tuples) {
-        final += "  ";
+        if (this->header.GetAttributes().size() > 0) {
+            final += "  ";
+        }
         for (unsigned int i = 0; i < this->header.GetAttributes().size(); ++i) {
             final += this->header.GetAttributes().at(i)
                     + "="
@@ -188,21 +199,34 @@ void Relation::ClearIndicesToMatch() {
 }
 
 Tuple Relation::JoinTuples(Tuple& t1, Tuple& t2) {
+    //std::cout << "In Join Tuples" << std::endl;
     Tuple newTuple;
     //Add each value from the first tuple
     for (unsigned int i = 0; i < t1.GetValues().size(); ++i) {
         newTuple.AddValue(t1.GetValues().at(i));
     }
     //for each index at which the second tuple will match
-    for (unsigned int i = 0; i < this->indicesToMatchSecondRelation.size(); ++i) {
-        //for each value in the second tuple
-        for (unsigned int j = 0; j < t2.GetValues().size(); ++j) {
-            //if the index is not one at which the tuple will match, add it to the new tuple
-            if (j != indicesToMatchSecondRelation.at(i)) {
-                newTuple.AddValue(t2.GetValues().at(j));
+    //std::cout << "Size of the index for matching indices: " << this->indicesToMatchSecondRelation.size() << std::endl;
+    if (this->indicesToMatchSecondRelation.size() > 0) {
+        for (unsigned int i = 0; i < this->indicesToMatchSecondRelation.size(); ++i) {
+            //for each value in the second tuple
+            for (unsigned int j = 0; j < t2.GetValues().size(); ++j) {
+                //std::cout << std::endl << "Index to match: " << this->indicesToMatchSecondRelation.at(i) << std::endl << std::endl;
+                //if the index is not one at which the tuple will match, add it to the new tuple
+                if (j != indicesToMatchSecondRelation.at(i)) {
+                    newTuple.AddValue(t2.GetValues().at(j));
+                }
             }
         }
     }
+    else {
+        for (unsigned int j = 0; j < t2.GetValues().size(); ++j) {
+            //std::cout << std::endl << "Index to match: " << this->indicesToMatchSecondRelation.at(i) << std::endl << std::endl;
+            //if the index is not one at which the tuple will match, add it to the new tuple
+            newTuple.AddValue(t2.GetValues().at(j));
+        }
+    }
+    //std::cout << std::endl << "New tuple: " << newTuple.ToString() << std::endl << std::endl;
     return newTuple;
 }
 

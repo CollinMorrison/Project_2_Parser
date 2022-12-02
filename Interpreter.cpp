@@ -141,17 +141,17 @@ void Interpreter::EvaluateRules() {
             }
             //Compile a list of the indices of the attributes in the tempRelation parameters that match the Rule head
             //TODO: the list compiled here is incorrect, I don't think join works correctly. See onenote on tablet
+            //std::cout << "Current Header: " << currentHead.ToString() << std::endl;
+            //std::cout << "tempRelation Header: " << tempRelation->GetHeader().ToString() << std::endl;
             for (unsigned int j = 0; j < currentHead.GetParameters().size(); ++j) {
                 for (unsigned int k = 0; k < tempRelation->GetHeader().GetAttributes().size(); ++k) {
-                    if (currentHead.GetParameters().at(j).GetValue() ==
-                        tempRelation->GetHeader().GetAttributes().at(k)) {
+                    if (currentHead.GetParameters().at(j).GetValue() == tempRelation->GetHeader().GetAttributes().at(k)) {
                         indices.push_back(k);
                     }
                 }
             }
             //Project the columns that appear in the head predicate
             tempRelation = tempRelation->Project(indices);
-
             //Rename the relation itself and the header attributes to make it union-compatible
             tempRelation->ReplaceName(currentHead.GetID());
             std::vector<std::string> newAttributes;
@@ -170,6 +170,7 @@ void Interpreter::EvaluateRules() {
     }
     std::cout << std::endl
                 << "Schemes populated after " << numLoops <<" passes through the Rules."
+                << std::endl
                 << std::endl;
 }
 
