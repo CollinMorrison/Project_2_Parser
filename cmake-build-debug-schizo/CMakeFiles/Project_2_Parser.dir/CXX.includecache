@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/users/guest/c/collinam/CS_236/Project_2_new3/Database.cpp
+Database.h
+/users/guest/c/collinam/CS_236/Project_2_new3/Database.h
+
+/users/guest/c/collinam/CS_236/Project_2_new3/Database.h
+Relation.h
+/users/guest/c/collinam/CS_236/Project_2_new3/Relation.h
+map
+-
+string
+-
+
+/users/guest/c/collinam/CS_236/Project_2_new3/Header.h
+vector
+-
+string
+-
+
+/users/guest/c/collinam/CS_236/Project_2_new3/Relation.h
+Tuple.h
+/users/guest/c/collinam/CS_236/Project_2_new3/Tuple.h
+Header.h
+/users/guest/c/collinam/CS_236/Project_2_new3/Header.h
+set
+-
+
+/users/guest/c/collinam/CS_236/Project_2_new3/Tuple.h
+vector
+-
+string
+-
+

@@ -19,6 +19,7 @@ int Database::GetNumTuples() {
         for (Tuple t : iter->second.GetTuples()) {
             ++numTuples;
         }
+        ++iter;
     }
     return numTuples;
 }

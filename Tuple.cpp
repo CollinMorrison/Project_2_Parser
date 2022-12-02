@@ -15,3 +15,12 @@ std::vector<std::string> Tuple::GetValues () {
 void Tuple::ClearValues() {
     this->values.clear();
 }
+
+std::string Tuple::ToString() {
+    std::string finalString;
+    for (unsigned int i = 0; i < this->values.size(); ++i) {
+        finalString += this->values.at(i)
+                + ", ";
+    }
+    return finalString;
+}

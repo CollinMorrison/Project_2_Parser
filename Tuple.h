@@ -18,6 +18,7 @@ public:
     void AddValue(std::string newValue);
     std::vector<std::string> GetValues ();
     void ClearValues();
+    std::string ToString();
 };
 
 
