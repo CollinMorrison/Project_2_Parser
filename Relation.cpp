@@ -99,11 +99,8 @@ Relation* Relation::Rename(std::vector<std::string> newAttributes) {
 Relation* Relation::Join(Relation* otherRelation) {
     //combine headers into a new header
     Header newHeader = this->CombineHeaders(this->header, otherRelation->GetHeader());
-
-    //TODO: not sure if the new relation needs a specific name
     //make a new relation using the expanded header
     Relation* newRelation = new Relation(this->name, newHeader);
-
     //for each tuple in each relation
     for (Tuple t1 : this->tuples) {
         for (Tuple t2 : otherRelation->GetTuples()) {
@@ -154,13 +151,10 @@ Header Relation::GetHeader() {
 
 Header Relation::CombineHeaders(Header firstHeader, Header secondHeader) {
     Header newHeader;
-    //std::cout << "First header: " << firstHeader.ToString() << std::endl;
-    //std::cout << "Second header: " << secondHeader.ToString() << std::endl;
     bool attributeExists = false;
     for (unsigned int i = 0; i < firstHeader.GetAttributes().size(); ++i) {
         newHeader.AddAttribute(firstHeader.GetAttributes().at(i));
     }
-    //std::cout << "New Header after adding first attributes: " << newHeader.ToString() << std::endl;
     for (unsigned int i = 0; i < secondHeader.GetAttributes().size(); ++i) {
         attributeExists = false;
         for (unsigned int j = 0; j < firstHeader.GetAttributes().size(); ++j) {
@@ -174,7 +168,6 @@ Header Relation::CombineHeaders(Header firstHeader, Header secondHeader) {
             newHeader.AddAttribute(secondHeader.GetAttributes().at(i));
         }
     }
-    //std::cout << "New Header: " << newHeader.ToString() << std::endl;
     return newHeader;
 }
 
@@ -195,26 +188,21 @@ void Relation::ClearIndicesToMatch() {
 }
 
 Tuple Relation::JoinTuples(Tuple& t1, Tuple& t2) {
-    //std::cout << "in join Tuples" << std::endl;
     Tuple newTuple;
     //Add each value from the first tuple
     for (unsigned int i = 0; i < t1.GetValues().size(); ++i) {
         newTuple.AddValue(t1.GetValues().at(i));
     }
-    //std::cout << "New tuple after filling it with the first values: " << newTuple.ToString() << std::endl;
     //for each index at which the second tuple will match
     for (unsigned int i = 0; i < this->indicesToMatchSecondRelation.size(); ++i) {
-        //std::cout << "Index to match (second header): " << this->indicesToMatchSecondRelation.at(i) << std::endl;
         //for each value in the second tuple
         for (unsigned int j = 0; j < t2.GetValues().size(); ++j) {
-            //std::cout << "Second relation index: " << j << std::endl;
             //if the index is not one at which the tuple will match, add it to the new tuple
             if (j != indicesToMatchSecondRelation.at(i)) {
                 newTuple.AddValue(t2.GetValues().at(j));
             }
         }
     }
-    //std::cout << "newTuple after adding second tuple: " << newTuple.ToString() << std::endl;
     return newTuple;
 }
 
@@ -224,12 +212,10 @@ void Relation::ReplaceName(std::string newName) {
 
 void Relation::Union(Relation* relationToUnion) {
     for (Tuple t : relationToUnion->GetTuples()) {
-        //std::cout << "Tuple size: " << t.GetValues().size() << std::endl;
         if (this->tuples.insert(t).second) {
             for (unsigned int i = 0; i < this->header.GetAttributes().size(); ++i) {
-                //std::cout << "Header size: " << this->header.GetAttributes().size() << std::endl;
-                //std::cout << "Tuple size: " << t.GetValues().size() << std::endl;
                 std::cout
+                    << "  "
                     << this->header.GetAttributes().at(i)
                     << "="
                     << t.GetValues().at(i);
