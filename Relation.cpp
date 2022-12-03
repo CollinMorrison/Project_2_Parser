@@ -111,11 +111,11 @@ Relation* Relation::Join(Relation* otherRelation) {
     for (Tuple t1 : this->tuples) {
         for (Tuple t2 : otherRelation->GetTuples()) {
             if (IsJoinable(t1,t2)) {
-                //std::cout << "First tuple: " << t1.ToString() << std::endl;
-                //std::cout << "Second tuple: " << t2.ToString() << std::endl;
+                //std::cout << "First tuple from " << this->header.ToString() << ": " << t1.ToString() << std::endl;
+                //std::cout << "Second tuple from " << otherRelation->GetHeader().ToString() << ": " << t2.ToString() << std::endl;
                 //join the tuples and add them to the new Relation
                 newRelation->AddTuple(JoinTuples(t1,t2));
-                //std::cout << "New Tuple: " << JoinTuples(t1, t2).ToString() << std::endl;
+                //std::cout << "New Tuple: " << JoinTuples(t1, t2).ToString() << std::endl << std::endl;
             }
         }
     }
@@ -213,7 +213,8 @@ Tuple Relation::JoinTuples(Tuple& t1, Tuple& t2) {
             for (unsigned int j = 0; j < t2.GetValues().size(); ++j) {
                 //std::cout << std::endl << "Index to match: " << this->indicesToMatchSecondRelation.at(i) << std::endl << std::endl;
                 //if the index is not one at which the tuple will match, add it to the new tuple
-                if (j != indicesToMatchSecondRelation.at(i)) {
+                if (!SecondVectorContainsValue(j) && i == 0) {
+                    //std::cout << "Value added" << std::endl;
                     newTuple.AddValue(t2.GetValues().at(j));
                 }
             }
@@ -252,4 +253,13 @@ void Relation::Union(Relation* relationToUnion) {
             }
         }
     }
+}
+
+bool Relation::SecondVectorContainsValue(unsigned int valueToCheck) {
+    for (unsigned int i = 0; i < this->indicesToMatchSecondRelation.size(); ++i) {
+        if (this->indicesToMatchSecondRelation.at(i) == valueToCheck) {
+            return true;
+        }
+    }
+    return false;
 }

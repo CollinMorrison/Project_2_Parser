@@ -21,7 +21,7 @@ public:
     Relation(std::string newName, Header newHeader);
     Relation* Select(int index, std::string value);
     Relation* Select(int index, int nextIndex);
-    //list of indices specifies the new order fo the columns in the new relation
+    //list of indices specifies the new order for the columns in the new relation
     Relation* Project(std::vector<int> indices);
     Relation* Rename(std::vector<std::string> newAttributes);
     Relation* Join(Relation* otherRelation);
@@ -36,6 +36,7 @@ public:
     Tuple JoinTuples(Tuple& t1, Tuple& t2);
     void ReplaceName(std::string newName);
     void Union(Relation* relationToUnion);
+    bool SecondVectorContainsValue(unsigned int valueToCheck);
 };
 
 
