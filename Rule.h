@@ -13,6 +13,7 @@ class Rule {
 private:
     Predicate head;
     std::vector<Predicate> body;
+    int identifier;
 public:
     Rule();
     std::string ToString();
@@ -22,6 +23,8 @@ public:
     void ClearHeadParameters();
     std::vector<Predicate> GetBody();
     Predicate GetHead();
+    void SetIdentifier(int newIdentifier);
+    int GetIdentifier();
 };
 
 

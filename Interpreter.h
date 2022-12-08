@@ -7,6 +7,7 @@
 
 #include "DatalogProgram.h"
 #include "Database.h"
+#include "Graph.h"
 
 
 class Interpreter {
@@ -21,7 +22,7 @@ public:
     void EvaluateQueries();
     Relation* EvaluatePredicate(Predicate& p);
     void EvaluateRules();
-    void Print();
+    Graph BuildDependencyGraph(std::vector<Rule> rules);
 
 };
 

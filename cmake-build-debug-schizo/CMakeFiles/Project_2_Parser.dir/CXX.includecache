@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/users/guest/c/collinam/CS_236/Project_2_new3/Database.cpp
-Database.h
-/users/guest/c/collinam/CS_236/Project_2_new3/Database.h
-
 /users/guest/c/collinam/CS_236/Project_2_new3/Database.h
 Relation.h
 /users/guest/c/collinam/CS_236/Project_2_new3/Relation.h
@@ -18,10 +14,54 @@ map
 string
 -
 
+/users/guest/c/collinam/CS_236/Project_2_new3/DatalogProgram.h
+string
+-
+vector
+-
+Predicate.h
+/users/guest/c/collinam/CS_236/Project_2_new3/Predicate.h
+Rule.h
+/users/guest/c/collinam/CS_236/Project_2_new3/Rule.h
+
 /users/guest/c/collinam/CS_236/Project_2_new3/Header.h
 vector
 -
 string
+-
+
+/users/guest/c/collinam/CS_236/Project_2_new3/Interpreter.cpp
+Interpreter.h
+/users/guest/c/collinam/CS_236/Project_2_new3/Interpreter.h
+iostream
+-
+
+/users/guest/c/collinam/CS_236/Project_2_new3/Interpreter.h
+DatalogProgram.h
+/users/guest/c/collinam/CS_236/Project_2_new3/DatalogProgram.h
+Database.h
+/users/guest/c/collinam/CS_236/Project_2_new3/Database.h
+
+/users/guest/c/collinam/CS_236/Project_2_new3/Parameter.h
+string
+-
+
+/users/guest/c/collinam/CS_236/Project_2_new3/Predicate.h
+string
+-
+vector
+-
+Parameter.h
+/users/guest/c/collinam/CS_236/Project_2_new3/Parameter.h
+Token.h
+/users/guest/c/collinam/CS_236/Project_2_new3/Token.h
+
+/users/guest/c/collinam/CS_236/Project_2_new3/Relation.cpp
+Relation.h
+/users/guest/c/collinam/CS_236/Project_2_new3/Relation.h
+DatalogProgram.h
+/users/guest/c/collinam/CS_236/Project_2_new3/DatalogProgram.h
+iostream
 -
 
 /users/guest/c/collinam/CS_236/Project_2_new3/Relation.h
@@ -30,6 +70,16 @@ Tuple.h
 Header.h
 /users/guest/c/collinam/CS_236/Project_2_new3/Header.h
 set
+-
+
+/users/guest/c/collinam/CS_236/Project_2_new3/Rule.h
+string
+-
+Predicate.h
+/users/guest/c/collinam/CS_236/Project_2_new3/Predicate.h
+
+/users/guest/c/collinam/CS_236/Project_2_new3/Token.h
+string
 -
 
 /users/guest/c/collinam/CS_236/Project_2_new3/Tuple.h

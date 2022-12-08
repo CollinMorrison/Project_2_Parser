@@ -117,6 +117,9 @@ Relation* Interpreter::EvaluatePredicate(Predicate& p) {
 
 void Interpreter::EvaluateRules() {
     std::cout << "Rule Evaluation" << std::endl;
+
+    std::cout << BuildDependencyGraph(this->datalogProgram.GetRules()).ToString();
+
     int numLoops = 0;
     std::vector<Relation*> relations;
     std::vector<int> indices;
@@ -174,6 +177,48 @@ void Interpreter::EvaluateRules() {
                 << std::endl;
 }
 
-void Interpreter::Print() {
+/*
+ * A dependency graph takes a list of rules as input and assembles a structure that associates resulting relations (headers) with
+ * other rules that produce tuples for the relations that the headers depend on (body)
+ *
+ */
+Graph Interpreter::BuildDependencyGraph(std::vector<Rule> rules) {
+    Graph newGraph;
+    std::vector<Predicate> currentBody;
+    std::string currentID;
+    Rule currentRule;
+    std::set<int> currentDependees;
 
+    //set the rule identifiers
+    for (unsigned int i = 0; i < rules.size(); ++i) {
+        rules.at(i).SetIdentifier(i);
+    }
+
+    for (unsigned int i = 0; i < rules.size(); ++i) {
+        currentRule = rules.at(i);
+        //std::cout << "Rule identifier: R" << currentRule.GetIdentifier() << std::endl;
+        //std::cout << "  Depends on: " << std::endl;
+        //obtain the set of rules that this current rule is dependent on
+            //get the body of the current rule
+            currentBody = rules.at(i).GetBody();
+            //loop over all the predicates in the current body and all the rules
+            for (unsigned int j = 0; j < currentBody.size(); ++j) {
+                currentID = currentBody.at(j).GetID();
+                for (unsigned int k = 0; k < rules.size(); ++k) {
+                    /* If the ID of the relation we're depending on in the current rule corresponds
+                     * to a relation we're creating tuples for in another rule, add that rule's identifier to the set
+                     */
+                    if (currentID == rules.at(k).GetHead().GetID()) {
+                        //std::cout << "    " << rules.at(k).GetIdentifier() << std::endl;
+                        currentDependees.insert(rules.at(k).GetIdentifier());
+                    }
+                }
+            }
+
+        //create a new node for the rule
+        newGraph.AddNode(currentRule.GetIdentifier(), currentDependees);
+        //Clear the set of dependees in preparation for the next rule
+        currentDependees.clear();
+    }
+    return newGraph;
 }

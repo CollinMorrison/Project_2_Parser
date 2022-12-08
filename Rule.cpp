@@ -47,3 +47,11 @@ std::vector<Predicate> Rule::GetBody() {
 Predicate Rule::GetHead() {
     return this->head;
 }
+
+void Rule::SetIdentifier(int newIdentifier) {
+    this->identifier = newIdentifier;
+}
+
+int Rule::GetIdentifier() {
+    return this->identifier;
+}
