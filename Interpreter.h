@@ -22,7 +22,6 @@ public:
     void EvaluateQueries();
     Relation* EvaluatePredicate(Predicate& p);
     void EvaluateRules();
-    Graph BuildDependencyGraph(std::vector<Rule> rules);
 
 };
 

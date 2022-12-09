@@ -7,6 +7,7 @@
 
 #include <set>
 #include <map>
+#include "Rule.h"
 
 class Graph {
 private:
@@ -15,6 +16,9 @@ private:
 
 public:
     void AddNode(int rule, std::set<int> dependees);
+    std::map<int, std::set<int>> GetNodes();
+    void BuildDependencyGraph(std::vector<Rule> rules);
+    void BuildReverseDependencyGraph(Graph dependencyGraph);
     std::string ToString();
 
 };
