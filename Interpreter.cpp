@@ -115,14 +115,58 @@ Relation* Interpreter::EvaluatePredicate(Predicate& p) {
         return currentRelation;
 }
 
-void Interpreter::EvaluateRules() {
-    std::cout << "Rule Evaluation" << std::endl;
+void Interpreter::EvaluateSCCS() {
+    std::vector<Rule> rules;
+
     Graph dependencyGraph;
     dependencyGraph.BuildDependencyGraph(this->datalogProgram.GetRules());
-    std::cout << dependencyGraph.ToString() << std::endl;
+    std::cout << "Dependency Graph" << std::endl << dependencyGraph.ToString() << std::endl;
+    std::cout << "Rule Evaluation" << std::endl;
     Graph reverseDependencyGraph;
     reverseDependencyGraph.BuildReverseDependencyGraph(dependencyGraph);
-    std::cout << reverseDependencyGraph.ToString() << std::endl;
+    //std::cout << reverseDependencyGraph.ToString() << std::endl;
+    std::vector<int> postOrderList = reverseDependencyGraph.FindPostOrderList();
+    /*std::cout << "Post Order List: " << std::endl;
+    for (unsigned int i = 0; i < postOrderList.size(); ++i) {
+        std::cout << "R" << postOrderList.at(i) << ", ";
+    }
+    std::cout << std::endl;*/
+
+    std::vector<std::set<int>> sccs = dependencyGraph.DFSF(postOrderList);
+    /*std::cout << "sccs: " << std::endl;
+    for (unsigned int i = 0; i < sccs.size(); ++i) {
+        //std::cout << "Size of set: " << sccs.at(i).size() << std::endl;
+        for (int element : sccs.at(i)) {
+            std::cout << element << ", ";
+        }
+        std::cout << std::endl;
+    }*/
+    for (unsigned int i = 0; i < sccs.size(); ++i) {
+        std::cout << "SCC: R";
+        for (int element : sccs.at(i)) {
+            std::cout << element;
+            auto it = sccs.at(i).end();
+            it--;
+            if (element != *it) {
+                std::cout << ", ";
+            }
+        }
+        std::cout << std::endl;
+        //Get all the actual rules that the scc corresponds to
+        for (int element : sccs.at(i)) {
+            for (unsigned int j = 0; j < this->datalogProgram.GetRules().size(); ++j) {
+                if (j == element) {
+                    rules.push_back(this->datalogProgram.GetRules().at(j));
+                }
+            }
+        }
+        //Evaluate the rules in the SCC
+        EvaluateRules(rules);
+        rules.clear();
+    }
+}
+
+void Interpreter::EvaluateRules(std::vector<Rule> rules) {
 
     int numLoops = 0;
     std::vector<Relation*> relations;
@@ -132,8 +176,8 @@ void Interpreter::EvaluateRules() {
     while (initialNumOfTuples - finalNumOfTuples != 0) {
         initialNumOfTuples = this->database.GetNumTuples();
         //for each rule in the datalog program
-        for (unsigned int i = 0; i < this->datalogProgram.GetRules().size(); ++i) {
-            Rule currentRule = this->datalogProgram.GetRules().at(i);
+        for (unsigned int i = 0; i < rules.size(); ++i) {
+            Rule currentRule = rules.at(i);
             std::cout << currentRule.ToString() << "." << std::endl;
             Predicate currentHead = currentRule.GetHead();
             //Evaluate the predicates in the body (right side),

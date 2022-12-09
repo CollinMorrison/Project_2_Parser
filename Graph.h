@@ -20,7 +20,9 @@ public:
     void BuildDependencyGraph(std::vector<Rule> rules);
     void BuildReverseDependencyGraph(Graph dependencyGraph);
     std::string ToString();
-
+    std::vector<int> FindPostOrderList();
+    std::set<int> DFS(std::pair<int, std::set<int>>& node, std::vector<bool>& isVisited, std::vector<int>& postOrderList);
+    std::vector<std::set<int>> DFSF(std::vector<int>& postOrderList);
 };
 
 

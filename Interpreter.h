@@ -21,8 +21,8 @@ public:
     void InterpretQueries();
     void EvaluateQueries();
     Relation* EvaluatePredicate(Predicate& p);
-    void EvaluateRules();
-
+    void EvaluateRules(std::vector<Rule> rules);
+    void EvaluateSCCS();
 };
 
 

@@ -3,6 +3,8 @@
 //
 
 #include "Graph.h"
+#include <iostream>
+#include <algorithm>
 
 void Graph::AddNode(int rule, std::set<int> dependees) {
         this->nodes.insert(std::pair<int, std::set<int>>(rule, dependees));
@@ -75,6 +77,59 @@ void Graph::BuildReverseDependencyGraph(Graph dependencyGraph) {
     }
 }
 
+std::vector<int> Graph::FindPostOrderList() {
+    std::vector<int> postOrderList;
+    std::vector<bool> isVisited;
+    //initialize all values in vector to false
+    for (std::pair<int, std::set<int>> element : this->nodes) {
+        isVisited.push_back(false);
+    }
+    for (std::pair<int, std::set<int>> element : this->nodes) {
+        //std::cout << "Node being evaluated: R" << element.first << std::endl;
+        DFS(element, isVisited, postOrderList);
+    }
+    return postOrderList;
+}
+
+std::set<int> Graph::DFS(std::pair<int, std::set<int>>& node1, std::vector<bool>& isVisited, std::vector<int>& postOrderList) {
+    std::set<int> output;
+    //set isVisited to true
+    //std::cout << "node being marked as visited: R" << node1.first << std::endl;
+    //std::cout << "Size of isVisited: " << isVisited.size() << std::endl;
+    isVisited.at(node1.first) = true;
+    //for each node adjacent to node1
+    for (int nodeLabel : node1.second) {
+        std::pair<int, std::set<int>> node2(nodeLabel, this->nodes.at(nodeLabel));
+        //if it's not visited, go down the tree
+        if (!isVisited.at(node2.first)) {
+            std::set<int> result = DFS(node2, isVisited, postOrderList);
+        }
+    }
+    if (std::find(postOrderList.begin(), postOrderList.end(), node1.first) == postOrderList.end()) {
+        //std::cout << "Adding to the postorder list: R" << node1.first << std::endl;
+        postOrderList.push_back(node1.first);
+    }
+    output.insert(node1.first);
+    return output;
+}
+
+std::vector<std::set<int>> Graph::DFSF(std::vector<int>& postOrderList) {
+    std::vector<std::set<int>> sccs;
+    std::vector<int> empty;
+    std::vector<bool> isVisited;
+    //set all isVisited to false
+    for (unsigned int i = 0; i < postOrderList.size(); ++i) {
+        isVisited.push_back(false);
+    }
+    for (unsigned int i = postOrderList.size(); i > 0; --i) {
+        //std::cout << "node in postorder list: R" << postOrderList.at(i - 1) << std::endl;
+        std::pair<int, std::set<int>> node(postOrderList.at(i - 1), this->nodes.at(postOrderList.at(i - 1)));
+        sccs.push_back(DFS(node, isVisited, postOrderList));
+    }
+    //std::cout << "Size of sccs: " << sccs.size() << std::endl;
+    return sccs;
+}
+
 std::string Graph::ToString() {
     std::string finalString;
     for (std::pair<int, std::set<int>> element : this->nodes) {
@@ -82,8 +137,12 @@ std::string Graph::ToString() {
                 + std::to_string(element.first)
                 + ": ";
         for (int ruleNumber : element.second) {
-            finalString += std::to_string(ruleNumber)
-                    + ", ";
+            finalString += std::to_string(ruleNumber);
+            auto it = element.second.end();
+            it--;
+            if (ruleNumber != *it) {
+                finalString += ", ";
+            }
         }
         finalString += "\n";
     }
