@@ -4,6 +4,7 @@
 
 #include "Interpreter.h"
 #include <iostream>
+#include <algorithm>
 
 Interpreter::Interpreter(DatalogProgram newDatalog) {
     this->datalogProgram = newDatalog;
@@ -153,28 +154,71 @@ void Interpreter::EvaluateSCCS() {
         }
         std::cout << std::endl;
         //Get all the actual rules that the scc corresponds to
+        //TODO: Make sure the rules vector isn't getting duplicate rules
         for (int element : sccs.at(i)) {
             for (unsigned int j = 0; j < this->datalogProgram.GetRules().size(); ++j) {
-                if (j == element) {
+                bool containsValue = false;
+                for (unsigned int k = 0; k < rules.size(); ++k) {
+                    if (std::find(rules.begin(), rules.end(), this->datalogProgram.GetRules().at(j)) != rules.end()) {
+                        containsValue = true;
+                    }
+                }
+                if (j == element && !containsValue) {
                     rules.push_back(this->datalogProgram.GetRules().at(j));
                 }
             }
         }
-        //Evaluate the rules in the SCC
-        EvaluateRules(rules);
-        rules.clear();
+        //std::cout << "Rule size: " << rules.size() << std::endl;
+        //std::cout << "SCC size: " << sccs.at(i).size() << std::endl;
+        //Evaluate the rules in the SCC based on conditions
+        if (sccs.at(i).size() == 1) {
+            bool isSelfLoop = false;
+            std::string headID = rules.at(0).GetHead().GetID();
+            for (unsigned int l = 0; l < rules.at(0).GetBody().size(); ++l) {
+                if (rules.at(0).GetBody().at(l).GetID() == headID) {
+                    isSelfLoop = true;
+                }
+            }
+            if (!isSelfLoop) {
+                EvaluateRules(rules);
+            }
+            else {
+                int numLoops = 0;
+                int initialNumOfTuples = this->database.GetNumTuples();
+                int finalNumOfTuples = 0;
+                while (initialNumOfTuples - finalNumOfTuples != 0) {
+                    initialNumOfTuples = this->database.GetNumTuples();
+                    EvaluateRules(rules);
+                    rules.clear();
+                    finalNumOfTuples = this->database.GetNumTuples();
+                    ++numLoops;
+                }
+            }
+        }
+        else {
+            int numLoops = 0;
+            int initialNumOfTuples = this->database.GetNumTuples();
+            int finalNumOfTuples = 0;
+            while (initialNumOfTuples - finalNumOfTuples != 0) {
+                initialNumOfTuples = this->database.GetNumTuples();
+                EvaluateRules(rules);
+                rules.clear();
+                finalNumOfTuples = this->database.GetNumTuples();
+                ++numLoops;
+            }
+        }
     }
 }
 
 void Interpreter::EvaluateRules(std::vector<Rule> rules) {
-
-    int numLoops = 0;
+    std::cout << "Evaluating rules..." << std::endl;
+    //int numLoops = 0;
     std::vector<Relation*> relations;
     std::vector<int> indices;
-    int initialNumOfTuples = this->database.GetNumTuples();
-    int finalNumOfTuples = 0;
-    while (initialNumOfTuples - finalNumOfTuples != 0) {
-        initialNumOfTuples = this->database.GetNumTuples();
+    //int initialNumOfTuples = this->database.GetNumTuples();
+    //int finalNumOfTuples = 0;
+   // while (initialNumOfTuples - finalNumOfTuples != 0) {
+        //initialNumOfTuples = this->database.GetNumTuples();
         //for each rule in the datalog program
         for (unsigned int i = 0; i < rules.size(); ++i) {
             Rule currentRule = rules.at(i);
@@ -213,14 +257,14 @@ void Interpreter::EvaluateRules(std::vector<Rule> rules) {
             //Union with the relation in the database
             Relation *unionRelation = this->database.GetRelation(currentHead.GetID());
             unionRelation->Union(tempRelation);
-            finalNumOfTuples = this->database.GetNumTuples();
+           // finalNumOfTuples = this->database.GetNumTuples();
             relations.clear();
             indices.clear();
         }
-        ++numLoops;
-    }
-    std::cout << std::endl
+        //++numLoops;
+    //}
+    /*std::cout << std::endl
                 << "Schemes populated after " << numLoops <<" passes through the Rules."
                 << std::endl
-                << std::endl;
+                << std::endl;*/
 }
